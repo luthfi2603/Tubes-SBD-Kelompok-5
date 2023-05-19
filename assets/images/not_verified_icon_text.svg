@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Verified_icon" data-name="Verified icon" width="79" height="15" viewBox="0 0 79 15">
+  <g id="Group_545" data-name="Group 545" transform="translate(134 -299)">
+    <g id="Group_544" data-name="Group 544" transform="translate(-131 26)">
+      <circle id="Verified_icon-2" data-name="Verified icon" cx="7.5" cy="7.5" r="7.5" transform="translate(-3 273)" fill="grey"/>
+      <path id="Checkbox" d="M6.164,10.628,1,5.464,2.225,4.238,6.164,8.089,13.253,1l1.225,1.225Z" transform="translate(-3.239 275.372)" fill="#fff"/>
+    </g>
+    <g id="verify_notif_bar" data-name="verify notif bar" transform="translate(-97 -13)">
+      <text id="Verified" transform="translate(-15 323)" fill="#848484" font-size="11" font-family="Arial-ItalicMT, Arial" font-style="italic"><tspan x="0" y="0">Not verified</tspan></text>
+    </g>
+  </g>
+</svg>
