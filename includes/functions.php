@@ -3,7 +3,7 @@
         session_start();
     }
 
-    $conn = mysqli_connect("localhost", "root", "", "kyuudent_store");
+    $conn = mysqli_connect("localhost", "root", "", "cgv");
 
     function tampilkan($query){
         global $conn;
@@ -18,23 +18,20 @@
     // fungsi untuk menambah data akun
     function tambah($data){
         global $conn;
-        // tidak boleh ada slash dan diubah ke huruf kecil
         $username = strtolower(stripslashes($data["username"]));
-        // agar tanda kutip dapat menjadi password
         $pass = mysqli_real_escape_string($conn, $data["password"]);
-        $konPass = mysqli_real_escape_string($conn, $data["konPass"]);
-        $email = strtolower($data["email"]); // agar diubah ke huruf kecil
+        $email = strtolower($data["email"]);
         $nama = $data["nama"];
         $gender = $data["gender"];
         $kota = $data["kota"];
-        $provinsi = $data["provinsi"];
         $noHp = $data["noHp"];
-        $kodePos = $data["kodePos"];
-        $alamat = $data["alamat"];
-        $level = 2;
+        $birthDate = $data["birthdate"];
+        $pcinema = $data["pcinema"];
+        $cardNo = $data["cardNo"];
+        $pin = $data["pin"];
 
-        $cekEmail = mysqli_query($conn, "SELECT email FROM akun WHERE email = '$email'");
-        $cekUsername = mysqli_query($conn, "SELECT username FROM akun WHERE username = '$username'");
+        $cekEmail = mysqli_query($conn, "SELECT email_address FROM user WHERE email_address = '$email'");
+        $cekUsername = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
 
         if(mysqli_num_rows($cekEmail) > 0){
             echo"
@@ -48,36 +45,24 @@
                     alert('username sudah terdaftar!');
                 </script>
             ";
-        }else if($pass !== $konPass){
-            echo"
-                <script>
-                    alert('konfirmasi password berbeda!');
-                </script>
-            ";
         }else{
             // enkripsi password
             $pass = password_hash($pass, PASSWORD_DEFAULT);
 
-            // upload gambar
-            $img = upload();
-
-            if(!$img){
-                return false;
-            }
-
-            $sql = "INSERT INTO akun 
-                        VALUES ('', 
-                        '$img', 
-                        '$username', 
-                        '$email', 
+            $sql = "INSERT INTO user
+                        (nama, no_hp, username, gender, city, email_address, birthdate,
+                        preferred_cinema, pin, card_no, password)
+                        VALUES (
                         '$nama',
-                        '$gender',
-                        '$alamat',
-                        '$kota',
-                        '$provinsi',
-                        '$kodePos',
                         '$noHp',
-                        '$level',
+                        '$username',
+                        '$gender',
+                        '$kota',
+                        '$email',
+                        '$birthDate',
+                        '$pcinema',
+                        '$pin',
+                        '$cardNo',
                         '$pass'
                         )
                     ";

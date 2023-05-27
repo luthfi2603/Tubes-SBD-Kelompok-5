@@ -1,3 +1,21 @@
+<?php
+    if(isset($_POST["registrasi"])){
+        if(tambah($_POST) > 0){
+            echo"
+                <script>
+                    alert('Pendaftaran akun berhasil');
+                    document.location.href = '/cgv?p=login';
+                </script>
+            ";
+        }else{
+            echo"
+                <script>
+                    alert('Pendaftaran akun gagal!');
+                </script>
+            ";
+        }
+    }
+?>
 <div class="main-body-container">
     <div class="body-wrapper">
         <div class="login-section">
@@ -14,9 +32,9 @@
                     <div role="tabpanel" class="tab-pane active" id="signup">
                         <div class="signup-header">
                             <h5>Create New Account</h5>
-                            <p>"Please provide accurate information so we may identify you at the Box Office" </p>
+                            <p>Please provide accurate information so we may identify you at the Box Office</p>
                         </div>
-                        <form action="https://www.cgv.id/en/user/register/submit" method="post" autocomplete="off" id="form-signup">
+                        <form action="" method="post" autocomplete="off" id="form-signup">
                             <input type="hidden" name="_token" value="wBtWa8SC6dW1himMjgrtEvdKYVkwjRvX4Eniq9dt">
                             <div class="form-group signup">
                                 <ul>
@@ -24,7 +42,6 @@
                                         <div class="input-group required">
                                             <label style="float: left;">
                                                 Preferred Cinema
-
                                             </label>
                                             <div style="display: block;padding-left: 170px;">
                                                 <select name="pref_city" id="citySelector" style="height: 30px;width: 100px;float: left;">
@@ -66,7 +83,7 @@
                                                     <option value="Tegal">Tegal</option>
                                                     <option value="Yogyakarta">Yogyakarta</option>
                                                 </select>
-                                                <select name="pref_cinema" style="height: 30px;width: 160px;float: right;">
+                                                <select name="pcinema" style="height: 30px;width: 160px;float: right;">
                                                     <option value>--Select Cinema--</option>
                                                     <option value="001" attr-city="Bandung">Paris Van Java</option>
                                                     <option value="002" attr-city="Jakarta">Grand Indonesia</option>
@@ -145,47 +162,46 @@
                                         <div class="input-group required">
                                             <label for="inputName">
                                                 Full Name
-
                                             </label>
-                                            <input type="text" id="inputName" name="name" value autocomplete="off">
+                                            <input type="text" id="inputName" name="nama" value autocomplete="off">
                                         </div>
                                         <div class="input-group">
                                             <label for="userName">Username</label>
                                             <input type="text" id="userName" name="username" value autocomplete="off">
-                                            <span class="usernameValidator" style="position: absolute; right: 10px; top: 10px;">
-                                                <i class="fa fa-check" data-toggle="tooltip" title data-original-title="Character allowed only alphabetic and numeric">
-                                                </i>
-                                            </span>
+                                            <!-- <span class="usernameValidator" style="position: absolute; right: 10px; top: 10px;">
+                                                <i class="fa fa-check" data-toggle="tooltip" title data-original-title="Character allowed only alphabetic and numeric"></i>
+                                            </span> -->
                                         </div>
                                         <div class="input-group required">
                                             <label for="inputGender">
                                                 Gender
-
                                             </label>
                                             <select id="inputGender" name="gender" style="height: 30px;">
                                                 <option>-- Select Gender --</option>
-                                                <option value="01">Male</option>
-                                                <option value="02">Female</option>
-                                                <option value="03">None</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="None">None</option>
                                             </select>
                                         </div>
                                         <div class="input-group required">
                                             <label>
                                                 Birthdate
                                             </label>
-                                            <input type="text" name="birthdate" id="datepicker" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="date" name="birthdate" id="datepicker" data-provide="datepicker" class="ms-5">
                                         </div>
                                         <div class="input-group required">
                                             <label>
                                                 Phone Number
                                             </label>
-                                            <input type="text" name="mobile" value placeholder="08XXX" autocomplete="off">
+                                            <input type="text" name="noHp" value placeholder="08XXX" autocomplete="off">
                                         </div>
                                         <div class="input-group required">
                                             <label for="inputCity">
                                                 City
                                             </label>
-                                            <select id="inputCity" name="city" style="height:30px;">
+                                            <select id="inputCity" name="kota" style="height:30px;">
                                                 <option value>-- Select City --</option>
                                                 <option value="006">Ambon</option>
                                                 <option value="007">Balikpapan</option>
@@ -308,35 +324,27 @@
                                                 New Password
                                             </label>
                                             <input type="password" name="password" value autocomplete="off" placeholder="8 Character Alphanumeric">
-                                            <span class="passValidator" style="position: absolute; right: 10px; top: 10px;">
+                                            <!-- <span class="passValidator" style="position: absolute; right: 10px; top: 10px;">
                                                 <i class="fa fa-close" data-toggle="tooltip" title data-original-title="8 digits combination of alphabet and numeric.">
                                                 </i>
-                                            </span>
+                                            </span> -->
                                         </div>
                                         <div class="input-group required">
                                             <label>
                                                 New PIN
                                             </label>
                                             <input type="password" name="pin" value autocomplete="off" placeholder="6 digits number">
-                                            <span class="pinValidator" style="position: absolute; right: 10px; top: 10px;">
+                                            <!-- <span class="pinValidator" style="position: absolute; right: 10px; top: 10px;">
                                                 <i class="fa fa-close" data-toggle="tooltip" title data-original-title="6 digits of numeric">
                                                 </i>
-                                            </span>
+                                            </span> -->
                                         </div>
                                         <div class="input-group">
                                             <label>
                                                 CGV Card No.
                                                 <small style="font-size: 12px; font-style: italic;">(If Any)</small>
                                             </label>
-                                            <input type="text" name="cgv_card_no" value autocomplete="off" placeholder="Your CGV Card No. (No space or dash)">
-                                        </div>
-                                        <div style="display: block;">
-                                            <img src="../images/captcha.png" style="float: right; border-radius: 5px; border: solid 1px #CCC; margin-bottom: 20px;">
-                                            <div class="clear"></div>
-                                        </div>
-                                        <div class="input-group">
-                                            <label>Captcha</label>
-                                            <input type="text" name="input_captcha" value autocomplete="off" placeholder="Answer above question">
+                                            <input type="text" name="cardNo" value autocomplete="off" placeholder="Your CGV Card No. (No space or dash)">
                                         </div>
                                     </li>
                                 </ul>
@@ -352,7 +360,7 @@
                             </div>
                             <div class="form-group signup-submit right">
                                 <div class="input-group">
-                                    <input type="submit" value="Create Account" disabled="disabled">
+                                    <input name="registrasi" type="submit" value="Create Account">
                                     <div class="clear"></div>
                                 </div>
                             </div>

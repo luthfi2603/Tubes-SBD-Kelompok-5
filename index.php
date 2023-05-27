@@ -1,3 +1,7 @@
+<?php
+    // memasukkan file fungsi
+    require "includes/functions.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -21,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/plugins/flexslider.css" media="all">
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/bootstrap.css?v=0.0.1" media="all">
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/seat.css?v=0.0.3" media="all">
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
     <script type="text/javascript" async src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" src="https://cdn.cgv.id/assets/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
