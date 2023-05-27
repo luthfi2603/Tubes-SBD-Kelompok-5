@@ -12,22 +12,15 @@
     <meta name="description" content="CGV Indonesia - Evolving beyond Movies">
     <meta name="author" content="CGV">
     <meta name="copyright" content="2015 CJ CGV All Right Reserved">
-    <title>Movies - CGV Cinemas</title>
-    <link rel="shortcut icon" href="https://www.cgv.id/favicon.ico" type="image/x-icon">
+    <title>CGV Cinemas</title>
+    <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="https://www.cgv.id/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/reset.css" media="all">
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/global/plugins/font-awesome/css/font-awesome.min.css" media="all">
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/style.css?v=0.0.68" media="all">
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/plugins/flexslider.css" media="all">
     <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/bootstrap.css?v=0.0.1" media="all">
-    <script src="https://partner.googleadservices.com/gampad/cookie.js?domain=www.cgv.id&callback=_gfp_s_&client=ca-pub-1505511952227201&cookie=ID%3De23bce74d6c55809-221bede3c8dc00c5%3AT%3D1679977911%3ART%3D1679977911%3AS%3DALNI_MZK67T2ctC_fSkUf7HZ13ajusdgcQ&gpic=UID%3D00000a34e434afeb%3AT%3D1679977911%3ART%3D1681526070%3AS%3DALNI_MbJ5X9MSZ6E_AfrM90tnWQ33JryZg">
-    </script>
-    <script src="https://connect.facebook.net/signals/config/380888722260575?v=2.9.101&r=stable" async></script>
-    <script src="https://connect.facebook.net/en_US/sdk.js?hash=e782561f08c06256dc0d735e58bdbbac" async crossorigin="anonymous"></script>
-    <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202304120101/show_ads_impl_fy2021.js?bust=31073869" id="google_shimpl"></script>
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=670242266377326">
-    </script>
-    <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/seat.css?v=0.0.3" media="all">
     <script type="text/javascript" async src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" src="https://cdn.cgv.id/assets/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
@@ -158,13 +151,13 @@
             transition: all 0.2s;
         }
 
-        .tab-content {
+        /* .tab-content {
             max-height: 0;
             padding: 0 1em;
             color: #333;
             background: transparent;
             transition: all 0.2s;
-        }
+        } */
 
         .tab-close,
         .tab-open {
@@ -238,6 +231,121 @@
             background-color: #afafaf;
             color: black;
         }
+
+        .cover_cinema {
+            position: relative;
+            height: 654px;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+
+        .price_section {
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            width: 96%;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        .price_audi {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .audi-features-text {
+            /* font-size: 1rem; */
+            margin-right: 10px;
+            margin-left: -10px;
+        }
+
+        .audi_image {
+            float: left;
+            padding: 0 5px;
+        }
+
+        .audi_image img {
+            width: 65px;
+            padding-right: 5px;
+        }
+
+        .audi_image img.sport-hall {
+            width: 50px !important;
+        }
+
+        .price_section .price_group {
+            padding: 0 10px;
+        }
+
+        .price_section .price_group .sub_group_price {
+            margin-top: 10px;
+        }
+
+        table.table_price {
+            line-height: 1.3;
+        }
+
+        table.table_price td {
+            border: none !important;
+            padding: 0px;
+            color: white;
+            font-weight: normal;
+        }
+
+        .column {
+            float: left;
+            width: 33%;
+            padding-bottom: 10px;
+        }
+
+        .col-prices-cinema-sch {
+            float: left;
+            width: 70%;
+        }
+
+        .col-info-cinema-sch {
+            float: left;
+            width: 30%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .title-price-info {
+            color: #ebeb85;
+            font-weight: bold;
+        }
+
+        .double-dot-padding {
+            padding: 0px 5px !important;
+        }
+
+        .legend-list {
+            display: flex;
+            align-items: center;
+        }
+
+        .seattype {
+            display: inline-block;
+        }
+
+        h4.seat-legend-title {
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .seat-legend-name {
+            display: inline;
+        }
     </style>
 </head>
 
@@ -288,6 +396,170 @@
             });
         });
     </script>
+    <script type='text/javascript'>
+        $(".seat-conce").on("click", "#conceCheck", function() {
+            if ($("#conceCheck").is(':checked'))
+                $("form input[name=conce]").val("1");
+            else
+                $("form input[name=conce]").val("0");
+        });
+
+        $(".seat-next").on("click", function() {
+            if (seats.length == 0) {
+                alert("Please select your seat.");
+                return false;
+            }
+        });
+
+        var seats = [];
+
+        const MOVIE_CD = '23009000';
+        const MOVIE_CD_SPECIAL = '22000100'; // Movie code BTS
+
+        function selectSeat(code) {
+            var seatSelector = $("a[attr-code='" + code + "']");
+            var seatGroupCode = seatSelector.attr("attr-grp-code");
+            if (!seatSelector.hasClass('chosen')) {
+                if (MOVIE_CD == MOVIE_CD_SPECIAL) { // For Movie BTS only
+                    if (seats.length < 2) {
+                        if (seatGroupCode != "") { // MULTIPLE SEATS
+                            $("a[attr-grp-code='" + seatGroupCode + "']").each(function() {
+                                var chosenSelector = $(this);
+                                chosenSelector.addClass('chosen');
+                                chosenSelector.attr("onclick", "removeSeat('" + chosenSelector.attr("attr-code") + "');");
+                                seats.push({
+                                    'id': chosenSelector.attr("id")
+                                });
+                                updatePrice(chosenSelector.attr("attr-price"), 'add');
+                            });
+                        } else {
+                            /*REGULAR*/
+                            seatSelector.addClass("chosen");
+                            seatSelector.attr("onclick", "removeSeat('" + code + "')");
+                            seats.push({
+                                'id': seatSelector.attr("id")
+                            });
+                            updatePrice(seatSelector.attr("attr-price"), "add");
+                        }
+                    } else {
+                        alert('Maximum 2 tickets per transaction');
+                    }
+                } else {
+                    if (seats.length < 6) {
+                        if (seatGroupCode != "") { // MULTIPLE SEATS
+                            $("a[attr-grp-code='" + seatGroupCode + "']").each(function() {
+                                var chosenSelector = $(this);
+                                chosenSelector.addClass('chosen');
+                                chosenSelector.attr("onclick", "removeSeat('" + chosenSelector.attr("attr-code") + "');");
+                                seats.push({
+                                    'id': chosenSelector.attr("id")
+                                });
+                                updatePrice(chosenSelector.attr("attr-price"), 'add');
+                            });
+                        } else {
+                            /*REGULAR*/
+                            seatSelector.addClass("chosen");
+                            seatSelector.attr("onclick", "removeSeat('" + code + "')");
+                            seats.push({
+                                'id': seatSelector.attr("id")
+                            });
+                            updatePrice(seatSelector.attr("attr-price"), "add");
+                        }
+                    } else {
+                        alert('You can choose maximum 6 seats.');
+                    }
+                }
+            }
+
+            $(".seats-count").html(seats.length);
+            updateSeatsList(seats);
+
+        }
+
+        function removeSeat(code) {
+            var seatSelector = $("a[attr-code='" + code + "']");
+            var seatGroupCode = seatSelector.attr("attr-grp-code");
+            if (seatSelector.hasClass('chosen')) {
+                if (seatGroupCode != "") { // MULTIPLE SEATS
+                    $("a[attr-grp-code='" + seatGroupCode + "']").each(function() {
+                        var chosenSelector = $(this);
+                        chosenSelector.removeClass('chosen');
+                        chosenSelector.attr("onclick", "selectSeat('" + chosenSelector.attr("attr-code") + "');");
+                        $.each(seats, function(index, value) {
+                            for (key in value) {
+                                if (value.hasOwnProperty(key) && value[key] == seatSelector.attr("id")) {
+                                    seats.splice(index, 1);
+                                } else if (value.hasOwnProperty(key) && value[key] == chosenSelector.attr("id")) {
+                                    seats.splice(index, 1);
+                                }
+                            }
+                        });
+                        updatePrice(chosenSelector.attr("attr-price"), 'min');
+                    });
+                } else {
+                    /*REGULAR*/
+                    seatSelector.removeClass('chosen');
+                    seatSelector.attr('onclick', "selectSeat('" + code + "')");
+                    $.each(seats, function(index, value) {
+                        for (key in value) {
+                            if (value.hasOwnProperty(key) && value[key] == seatSelector.attr("id")) {
+                                seats.splice(index, 1);
+                            }
+                        }
+                    });
+                    updatePrice(seatSelector.attr("attr-price"), 'min');
+                }
+            }
+
+            $(".seats-count").html(seats.length);
+            updateSeatsList(seats);
+        }
+
+        function updateSeatsList(seatList) {
+            var labelList = [];
+            if (seatList.length > 0) {
+                $.each(seatList, function(key, val) {
+                    labelList.push($("a#" + val.id).text());
+                });
+
+                $(".seats-list").html(labelList.join(";"));
+            } else {
+                $(".seats-list").html("-");
+            }
+        }
+
+        function updatePrice(price, action) {
+            var totalPrice = Number($(".seats-cost").html().replace(/[^0-9\.]+/g, ""));
+            var unitPrice = parseInt(price);
+
+            if (action == 'min')
+                $(".seats-cost").html(accounting.formatMoney(totalPrice - unitPrice, " ", 0));
+            else
+                $(".seats-cost").html(accounting.formatMoney(totalPrice + unitPrice, " ", 0));
+
+            $("input[name='seats']").val(JSON.stringify(seats));
+        }
+    </script>
+    <script>
+        function playTrailer(videoId) {
+            $(".trailer-section").html('<iframe width="560" height="315" src="' + videoId + '?autoplay=1" frameborder="0" gesture="media" allowfullscreen></iframe>');
+        }
+
+        $("a.active").on("click", function() {
+            $("form").attr("action", "https://www.cgv.id/en/schedule/view_seat_layout" + "/" + $(this).attr("id"));
+            $("form input[type='submit']").removeAttr('disabled');
+            $("form input[name='cinema']").val($(this).attr("attr-that-cd"));
+            $(".showtime-lists li").removeClass('on');
+            $(this).parent().addClass('on');
+            $("#sum-showtime").html($(this).html());
+            $("#sum-suite").html($(this).attr("attr-fmt"));
+            $("#sum-movie").html($(this).attr("attr-mov"));
+            $("#sum-location").html($(this).attr("attr-that"));
+            $('html, body').animate({
+                scrollTop: $(".showtimes-sum").offset().top - 300
+            }, 1000);
+        });
+    </script>
     <script type="text/javascript" src="https://cdn.cgv.id/assets/js/plugins/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="https://cdn.cgv.id/assets/js/plugins/accounting.js"></script>
     <script type="text/javascript" src="https://cdn.cgv.id/assets/js/bootstrap.min.js"></script>
@@ -336,11 +608,8 @@
             <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/852877016/?guid=ON&amp;script=0" />
         </div>
     </noscript>
-
-
-
-
     <iframe src="./Movies - CGV Cinemas_files/aframe.html" width="0" height="0" style="display: none;"></iframe>
-</body><iframe id="google_esf" name="google_esf" src="./Movies - CGV Cinemas_files/zrt_lookup.html" style="display: none;"></iframe>
+</body>
+<iframe id="google_esf" name="google_esf" src="./Movies - CGV Cinemas_files/zrt_lookup.html" style="display: none;"></iframe>
 
 </html>

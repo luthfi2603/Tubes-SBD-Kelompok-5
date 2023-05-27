@@ -34,7 +34,7 @@
                     <section>
                         <div>
                             <div class="special-audi-section">
-                                <a href="/detail1">
+                                <a href="/cgv?p=detail-special">
                                     <img src="https://cdn.cgv.id/uploads/special_audi/2212/SA202212230425347707.jpg" />
                                 </a>
                             </div>

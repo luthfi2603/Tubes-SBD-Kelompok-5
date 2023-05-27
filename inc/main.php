@@ -34,6 +34,35 @@
             case"special":
                 include "page/special.php";
                 break;
+            case"detail-movie":
+                include "page/detail-movie.php";
+                break;
+            case"profil":
+                include "page/profil.php";
+            case"snack":
+                include "page/snack.php";
+                break;
+            case"concession":
+                include "page/concession.php";
+                break;
+            case"seat":
+                include "page/seat.php";
+                break;
+            case"payment":
+                include "page/payment.php";
+                break;
+            case"edit-profil":
+                include "page/edit-profil.php";
+                break;
+            case"detail-promotion":
+                include "page/detail-promotion.php";
+                break;
+            case"detail-special":
+                include "page/detail-special.php";
+                break;
+            case"detail-news":
+                include "page/detail-news.php";
+                break;
             default:
                 echo'
                     <div class="container mtNav">

@@ -2,7 +2,7 @@
     <div class="body-wrapper">
         <div class="movie-list-body">
             <ul>
-                <li><a href="https://www.cgv.id/en/movies/info/23009200"><img class="lazy" src="assets/images/23009200.jpg" style="display: inline-block;"></a></li>
+                <li><a href="/cgv?p=detail-movie"><img class="lazy" src="assets/images/23009200.jpg" style="display: inline-block;"></a></li>
                 <li><a href="https://www.cgv.id/en/movies/info/23007600"><img class="lazy" src="assets/images/23007600.jpg" style="display: inline-block;"></a></li>
                 <li><a href="https://www.cgv.id/en/movies/info/23006100"><img class="lazy" src="assets/images/23006100.jpg" style="display: inline-block;"></a></li>
                 <li><a href="https://www.cgv.id/en/movies/info/23008900"><img class="lazy" src="assets/images/23008900.jpg" style="display: inline-block;"></a></li>

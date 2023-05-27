@@ -1,5 +1,3 @@
-<script src="https://www.google.com/recaptcha/api.js">
-</script>
 <div class="main-body-container">
     <div class="body-wrapper">
         <div class="login-section">

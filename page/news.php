@@ -2,7 +2,7 @@
     <div class="body-wrapper">
         <div class="promo-list-wrapper">
             <div class="promo-section">
-                <a href="https://www.cgv.id/en/events/detail/EV202304190142102526">
+                <a href="/cgv?p=detail-news">
                     <img src="https://cdn.cgv.id/uploads/events/2304/EV202304190142102526.jpg" />
                     <div class="promo-body">
                         <h2>CGV Ecoplaza Maja Citra Raya siap Temani Liburanmu!</h2>
@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="promo-section">
-                <a href="https://www.cgv.id/en/events/detail/EV202304180742346390">
+                <a href="/cgv?p=detail-news">
                     <img src="https://cdn.cgv.id/uploads/events/2304/EV202304180742346390.jpg" />
                     <div class="promo-body">
                         <h2>Pendaftaran CGV Campus Ambassador telah dibuka!</h2>

@@ -58,7 +58,7 @@
                     <div class="header-content">
                         <a href="/cgv" class="header-logo" style="display:block;">&nbsp;</a>
                         <div class="header-nav">
-                            <img class="culture-logo" src="https://cdn.cgv.id/assets/images/h2_cultureplex_new_resized.png" style="height:40px; width:170px; text-align:center;">
+                            <img class="culture-logo" src="https://cdn.cgv.id/assets/images/h2_cultureplex_new_resized.png" style="text-align: center; width: 234px;">
                             <nav class="primary_nav_wrap">
                                 <ul>
                                     <li class="current-menu-item">

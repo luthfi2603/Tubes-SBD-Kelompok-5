@@ -2,7 +2,7 @@
     <div class="body-wrapper">
         <div class="promo-list-wrapper">
             <div class="promo-section">
-                <a href="https://www.cgv.id/en/promotion/detail/PR202304210244317162">
+                <a href="/cgv?p=detail-promotion">
                     <img src="assets/images/promotion.jpg">
                     <div class="promo-body">
                         <h2>Dapatkan Cashback 100% nonton Jin & Jun pakai QRIS Livin by Mandiri</h2>
