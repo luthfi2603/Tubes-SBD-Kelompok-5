@@ -67,15 +67,12 @@
             case"logout":
                 include "includes/logout.php";
                 break;
+            case"admin":
+                include "page/admin/admin.php";
+                break;
             default:
                 echo'
-                    <div class="container mtNav">
-                        <div class="row">
-                            <div class="col-12">
-                                <h2 class="text-center text-huruf">Halaman Tidak Ditemukan</h2>
-                            </div>
-                        </div>
-                    </div>
+                    <h1>Halaman Tidak Ditemukan</h1>
                 ';
                 break;
         }

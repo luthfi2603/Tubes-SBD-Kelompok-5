@@ -1,6 +1,12 @@
 <?php
     // memasukkan file fungsi
     require "includes/functions.php";
+    if(isset($_SESSION['level'])){
+        if($_SESSION['level'] == 1){
+            header('location: /cgv/admin');
+        }
+    }
+    // var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html>

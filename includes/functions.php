@@ -361,7 +361,7 @@
                     echo"
                         <script>
                             alert('Selamat datang admin');
-                            document.location.href = '?p=admin';
+                            document.location.href = '/cgv/admin';
                         </script>
                     ";
                     $_SESSION['id'] = $id;
