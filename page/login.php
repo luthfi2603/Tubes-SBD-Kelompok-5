@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST["login"])){
+        login($_POST);
+    }
+?>
 <div class="main-body-container">
     <div class="body-wrapper">
         <div class="login-section">
@@ -10,8 +15,7 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="login">
                         <div class="form-group login">
-                            <form action="https://www.cgv.id/en/user/authenticate" method="post" autocomplete="off">
-                                <input type="hidden" name="_token" value="4QoA0RumXu5AwV1ToST70hw81are2ivxpuUfAKgD">
+                            <form action="" method="post" autocomplete="off">
                                 <div class="form-msg">
                                     Login with your web profile
                                 </div>
@@ -24,7 +28,7 @@
                                     <input type="password" name="password" placeholder="Password" autocomplete="off" />
                                 </div>
                                 <div class="input-group">
-                                    <input type="submit" value="Login" class="g-recaptcha" data-sitekey="6LdPw1kUAAAAANnq6qTKBXXUyFzbZbjXdQkZt_4m" data-callback="onSubmit" onclick="loginPushed()" />
+                                    <input name="login" type="submit" value="Login" class="g-recaptcha" data-sitekey="6LdPw1kUAAAAANnq6qTKBXXUyFzbZbjXdQkZt_4m" data-callback="onSubmit" onclick="loginPushed()" />
                                 </div>
                                 <div class="input-group">
                                     <div class="forgot-pass">

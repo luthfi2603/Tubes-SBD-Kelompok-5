@@ -39,6 +39,7 @@
                 break;
             case"profil":
                 include "page/profil.php";
+                break;
             case"snack":
                 include "page/snack.php";
                 break;
@@ -62,6 +63,9 @@
                 break;
             case"detail-news":
                 include "page/detail-news.php";
+                break;
+            case"logout":
+                include "includes/logout.php";
                 break;
             default:
                 echo'

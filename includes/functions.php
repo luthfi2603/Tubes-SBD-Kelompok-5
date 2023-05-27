@@ -16,7 +16,7 @@
     }
 
     // fungsi untuk menambah data akun
-    function tambah($data){
+    function register($data){
         global $conn;
         $username = strtolower(stripslashes($data["username"]));
         $pass = mysqli_real_escape_string($conn, $data["password"]);
@@ -336,98 +336,61 @@
     }
 
     // fungsi untuk login
-    function masuk($data){
+    function login($data){
         global $conn;
         global $user;
         global $pass;
         global $email;
-        $user_login = strtolower($data["user"]);
+        $email_login = strtolower($data["email"]);
         $pass_login = mysqli_real_escape_string($conn, $data["password"]);
-        $query = "SELECT * FROM akun WHERE (username = '{$user_login}' or email = '{$user_login}')";
-        // AND password = '{$pass_login}'
+        $query = "SELECT * FROM user WHERE email_address = '$email_login'";
         $hasil = mysqli_query($conn, $query);
 
-        // cek username atau email
+        // cek email
         if(mysqli_num_rows($hasil) === 1){
             foreach($hasil as $isi){
-                $id = $isi['id'];
+                $id = $isi['id_user'];
                 $user = $isi['username'];
-                $email = $isi['email'];
+                $email = $isi['email_address'];
                 $pass = $isi['password'];
-                $img = $isi['img'];
                 $level = $isi['level'];
             }
             // cek password
             if(password_verify($pass_login, $pass)){
-                // cek ingat saya
-                if(isset($data['ingat'])){
-                    // buat cookie
-                    setcookie('id', $id, time() + (60 * 60 * 24 * 30));
-                    setcookie('key', hash('sha256', $user), time() + (60 * 60 * 24 * 30));
-
-                    if($level == 1){
-                        echo"
-                            <script>
-                                alert('selamat datang admin');
-                                document.location.href = '?p=admin';
-                            </script>
-                        ";
-                        $_SESSION['username'] = $user;
-                        $_SESSION['email'] = $email;
-                        $_SESSION['img'] = $img;
-                        $_SESSION['id'] = $id;
-                        $_SESSION['level'] = $level;
-                    }else{
-                        echo"
-                            <script>
-                                alert('berhasil masuk');
-                                document.location.href = 'inc/..';
-                            </script>
-                        ";
-                        $_SESSION['username'] = $user;
-                        $_SESSION['email'] = $email;
-                        $_SESSION['img'] = $img;
-                        $_SESSION['id'] = $id;
-                        $_SESSION['level'] = $level;
-                    }
+                if($level == 1){
+                    echo"
+                        <script>
+                            alert('Selamat datang admin');
+                            document.location.href = '?p=admin';
+                        </script>
+                    ";
+                    $_SESSION['id'] = $id;
+                    $_SESSION['username'] = $user;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['level'] = $level;
                 }else{
-                    if($level == 1){
-                        echo"
-                            <script>
-                                alert('selamat datang admin');
-                                document.location.href = '?p=admin';
-                            </script>
-                        ";
-                        $_SESSION['username'] = $user;
-                        $_SESSION['email'] = $email;
-                        $_SESSION['img'] = $img;
-                        $_SESSION['id'] = $id;
-                        $_SESSION['level'] = $level;
-                    }else{
-                        echo"
-                            <script>
-                                alert('berhasil masuk');
-                                document.location.href = 'inc/..';
-                            </script>
-                        ";
-                        $_SESSION['username'] = $user;
-                        $_SESSION['email'] = $email;
-                        $_SESSION['img'] = $img;
-                        $_SESSION['id'] = $id;
-                        $_SESSION['level'] = $level;
-                    }
+                    echo"
+                        <script>
+                            alert('login berhasil');
+                            document.location.href = '/cgv';
+                        </script>
+                    ";
+                    $_SESSION['id'] = $id;
+                    $_SESSION['username'] = $user;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['level'] = $level;
                 }
             }else{
                 echo"
                     <script>
-                        alert('password salah!');
+                        alert('Login gagal');
                     </script>
                 ";    
             }
         }else{
 			echo"
                 <script>
-                    alert('username / email tidak terdaftar!');
+                    alert('Login gagal');
                 </script>
             ";
 		}
@@ -435,14 +398,10 @@
     }
 
     // fungsi logout
-    function keluar(){
-        session_start();
+    function logout(){
         $_SESSION = [];
         session_unset();
         session_destroy();
-
-        setcookie('id', '', time() - 3600);
-        setcookie('key', '', time() - 3600);
     }
 
     // function untuk mencari di halaman data akun

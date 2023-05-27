@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST["registrasi"])){
-        if(tambah($_POST) > 0){
+        if(register($_POST) > 0){
             echo"
                 <script>
                     alert('Pendaftaran akun berhasil');

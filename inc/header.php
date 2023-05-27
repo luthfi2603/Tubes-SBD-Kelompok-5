@@ -43,12 +43,18 @@
                             <li>
                                 <a href="/cgv?p=news">news</a>
                             </li>
-                            <li>
-                                <a href="/cgv?p=login">login</a>
-                            </li>
-                            <li>
-                                <a href="/cgv?p=register">sign up</a>
-                            </li>
+                            <?php if(!empty($_SESSION['username'])) : ?>
+                                <li>
+                                    <a href="/cgv?p=logout">logout</a>
+                                </li>
+                            <?php else : ?>
+                                <li>
+                                    <a href="/cgv?p=login">login</a>
+                                </li>
+                                <li>
+                                    <a href="/cgv?p=register">sign up</a>
+                                </li>
+                            <?php endif ?>
                             <li></li>
                         </ul>
                     </div>
@@ -71,10 +77,18 @@
                                         <a href="/cgv?p=promotion">PROMOTION</a>
                                     </li>
                                     <li>
-                                        <a href="/cgv?p=membership">MEMBERSHIP</a>
+                                        <?php if(!empty($_SESSION['username'])) : ?>
+                                            <a href="/cgv?p=profil">MEMBERSHIP</a>
+                                        <?php else : ?>
+                                            <a href="/cgv?p=membership">MEMBERSHIP</a>
+                                        <?php endif ?>
                                     </li>
                                     <li>
-                                        <a href="/cgv?p=login">CONCESSION</a>
+                                        <?php if(!empty($_SESSION['username'])) : ?>
+                                            <a href="/cgv?p=snack">CONCESSION</a>
+                                        <?php else : ?>
+                                            <a href="/cgv?p=login">CONCESSION</a>
+                                        <?php endif ?>
                                     </li>
                                     <li>
                                         <a href="/cgv?p=special">SPECIAL</a>
