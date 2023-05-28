@@ -1,3 +1,71 @@
+<?php
+        $conn = mysqli_connect("localhost", "root", "", "cgv");
+        
+          
+          $query = "SELECT * FROM user";
+          $hasil=mysqli_query($conn, $query);
+          include "../layouts/sidebar.php";
+    
+        
+        
+          echo "<table class='table table-bordered'>";
+          echo 
+          "<tr>
+          <th>id_user</th>
+          <th>nama</th>
+          <th>no_hp</th>
+          <th>username</th>
+          <th>gender</th>
+          <th>city</th>
+          <th>email_address</th>
+          <th>birthdate</th>
+          <th>preferred_cinema</th>
+          <th>pin</th>
+          <th>card no</th>
+          <th>password</th>
+          <th>level</th>
+          </tr>";
+
+          foreach($hasil as $data)
+   {
+   echo "<tr><td>".$data['id_user']."</td><td>".$data['nama']."</td><td>".$data['no_hp']."</td><td>".$data['username']."</td><td>".$data['gender']."</td><td>".$data['city']."</td><td>".$data['email_address']."</td><td>".$data['birthdate']."</td><td>".$data['preferred_cinema']."</td><td>".$data['pin']."</td><td>".$data['card_no']."</td><td>".$data['password']."</td><td>".$data['level']."</td>";
+   //disini akan dibuat tombol Edit dan Hapus 
+   echo "<td><form method='POST' action='ubah.php'>
+   <input type='hidden' name='id_user' value=".$data['id_user'].">
+   <button type='submit' name='btnUpdate' class='btn btn-info'>Update</button></form></td>";
+   echo "<td><form onsubmit=\"return confirm ('Anda Yakin Mau Menghapus Data?');\" method='POST'>
+   <input type='hidden' name='id_user' value=".$data['id_user'].">
+   <button type='submit' name='btnHapus' class='btn btn-danger'>Delete</button></form></td>
+   </tr>";
+   
+   if(isset($_POST['btnHapus'])){
+    // Inisiasi variabel untuk menampung isian id
+    $id = $_POST['id_user'];
+
+    if ($conn) {
+        $sql = "DELETE FROM user WHERE id_user='$id'";
+        mysqli_query($conn, $sql);
+        echo "<p class='alert alert-success text-center'><b>Data Akun Berhasil Dihapus.</b></p>";
+    } elseif ($conn->connect_error) {
+        echo "<p class='alert alert-danger text-center'><b>Data gagal dihapus. Terjadi kesalahan: ". $conn->connect_error. "</b></p>";
+    }
+} elseif(isset($_POST['btnUpdate'])){
+    // Inisiasi variabel untuk menampung isian id
+    $id = $_POST['id_user'];
+    
+    // Redirect ke halaman ubah.php dengan mengirimkan id_user yang ingin diubah
+    header("Location: ubah.php?id_user=$id");
+    exit();
+}
+}
+    
+    echo "</table>";
+
+
+
+?>
+          
+<!--       
 @extends('admin.layouts.main')
 
 @section('container')
@@ -31,7 +99,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($users as $user)
+                @foreach($hasil as $data)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         @if($user->image == 'assets/img/no_photo.png')
@@ -72,3 +140,4 @@
         {{ $users->links() }}
     </div>
 @endsection
+-->

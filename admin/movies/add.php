@@ -6,13 +6,13 @@
     </div>
 
     <div class="my-4">
-        <form action="/admin/products/add" method="POST" enctype="multipart/form-data">
+        <form action="/admin/movies/add" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-5 mx-auto">
                     <div class="mb-3">
-                        <label for="nama_produk" class="form-label">Nama Produk</label>
-                        <input name="nama_produk" type="text" class="form-control @error('nama_produk') is-invalid @enderror" id="nama_produk" placeholder="Masukkan nama produk" autofocus value="{{ old('nama_produk') }}">
+                        <label for="nama_produk" class="form-label">Judul Movie</label>
+                        <input name="nama_produk" type="text" class="form-control @error('nama_produk') is-invalid @enderror" id="nama_produk" placeholder="Masukkan judul movie" autofocus value="{{ old('nama_produk') }}">
                         @error('nama_produk')
                             <div class="invalid-feedback">
                                 {{ $message }}

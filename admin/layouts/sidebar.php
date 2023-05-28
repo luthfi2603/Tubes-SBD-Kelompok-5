@@ -8,15 +8,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin/users*') ? 'active' : ''}}" href="/admin/users">
+                <a class="nav-link {{ Request::is('admin/users*') ? 'active' : ''}}" href="/cgv/admin/users/akun.php">
                     <span data-feather="user" class="align-text-bottom"></span>
                     Users
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin/products*') ? 'active' : ''}}" href="/admin/products">
+                <a class="nav-link {{ Request::is('admin/products*') ? 'active' : ''}}" href="/admin/movies/add.php">
                     <span data-feather="package" class="align-text-bottom"></span>
-                    Products
+                    Movies
                 </a>
             </li>
             <li class="nav-item">
