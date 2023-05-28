@@ -15,6 +15,8 @@
             ";
         }
     }
+
+    $city = tampilkan("SELECT * FROM cities ORDER BY name ASC");
 ?>
 <div class="main-body-container">
     <div class="body-wrapper">
@@ -45,43 +47,10 @@
                                             </label>
                                             <div style="display: block;padding-left: 170px;">
                                                 <select name="pref_city" id="citySelector" style="height: 30px;width: 100px;float: left;">
-                                                    <option value>All</option>
-                                                    <option value="Jakarta">Jakarta</option>
-                                                    <option value="Balikpapan">Balikpapan</option>
-                                                    <option value="Bandung">Bandung</option>
-                                                    <option value="Batam">Batam</option>
-                                                    <option value="Bekasi">Bekasi</option>
-                                                    <option value="Blitar">Blitar</option>
-                                                    <option value="Bogor">Bogor</option>
-                                                    <option value="Cikarang">Cikarang</option>
-                                                    <option value="Cirebon">Cirebon</option>
-                                                    <option value="Depok">Depok</option>
-                                                    <option value="Gresik">Gresik</option>
-                                                    <option value="Jember">Jember</option>
-                                                    <option value="Karawang">Karawang</option>
-                                                    <option value="Kediri">Kediri</option>
-                                                    <option value="Lampung">Lampung</option>
-                                                    <option value="Madiun">Madiun</option>
-                                                    <option value="Makassar">Makassar</option>
-                                                    <option value="Malang">Malang</option>
-                                                    <option value="Manado">Manado</option>
-                                                    <option value="Mataram">Mataram</option>
-                                                    <option value="Medan">Medan</option>
-                                                    <option value="Mojokerto">Mojokerto</option>
-                                                    <option value="Padang">Padang</option>
-                                                    <option value="Palembang">Palembang</option>
-                                                    <option value="Pekanbaru">Pekanbaru</option>
-                                                    <option value="Probolinggo">Probolinggo</option>
-                                                    <option value="Purwakarta">Purwakarta</option>
-                                                    <option value="Purwokerto">Purwokerto</option>
-                                                    <option value="Samarinda">Samarinda</option>
-                                                    <option value="Serang">Serang</option>
-                                                    <option value="Solo">Solo</option>
-                                                    <option value="Surabaya">Surabaya</option>
-                                                    <option value="Tangerang">Tangerang</option>
-                                                    <option value="Tangerang Selatan">Tangerang Selatan</option>
-                                                    <option value="Tegal">Tegal</option>
-                                                    <option value="Yogyakarta">Yogyakarta</option>
+                                                    <option value="">All</option>
+                                                    <?php foreach($city as $item) : ?>
+                                                    <option value="<?= $item['name'] ?>"><?= $item['name'] ?></option>
+                                                    <?php endforeach ?>
                                                 </select>
                                                 <select name="pcinema" style="height: 30px;width: 160px;float: right;">
                                                     <option value>--Select Cinema--</option>
@@ -203,112 +172,9 @@
                                             </label>
                                             <select id="inputCity" name="kota" style="height:30px;">
                                                 <option value>-- Select City --</option>
-                                                <option value="006">Ambon</option>
-                                                <option value="007">Balikpapan</option>
-                                                <option value="052">BandaAceh</option>
-                                                <option value="009">Bandung</option>
-                                                <option value="053">Banjar</option>
-                                                <option value="054">Banjarbaru</option>
-                                                <option value="010">Banjarmasin</option>
-                                                <option value="011">Batam</option>
-                                                <option value="012">Batu</option>
-                                                <option value="055">Bau-Bau</option>
-                                                <option value="013">Bekasi</option>
-                                                <option value="014">Bengkulu</option>
-                                                <option value="056">Bima</option>
-                                                <option value="057">Binjai</option>
-                                                <option value="058">Bitung</option>
-                                                <option value="059">Blitar</option>
-                                                <option value="015">Bogor</option>
-                                                <option value="060">Bontang</option>
-                                                <option value="061">Bukit Tinggi</option>
-                                                <option value="101">Cikarang</option>
-                                                <option value="016">Cilegon</option>
-                                                <option value="062">Cimahi</option>
-                                                <option value="017">Cirebon</option>
-                                                <option value="018">Denpasar</option>
-                                                <option value="019">Depok</option>
-                                                <option value="063">Dumai</option>
-                                                <option value="064">Gorontalo</option>
-                                                <option value="102">Gresik</option>
-                                                <option value="065">Gunungsitoli</option>
-                                                <option value="001">Jakarta Barat</option>
-                                                <option value="002">Jakarta Pusat</option>
-                                                <option value="003">Jakarta Selatan</option>
-                                                <option value="004">Jakarta Timur</option>
-                                                <option value="005">Jakarta Utara</option>
-                                                <option value="020">Jambi</option>
-                                                <option value="066">Jayapura</option>
-                                                <option value="104">Jember</option>
-                                                <option value="105">Karanganyar</option>
-                                                <option value="051">Karawang</option>
-                                                <option value="021">Kediri</option>
-                                                <option value="067">Kendari</option>
-                                                <option value="069">Kupang</option>
-                                                <option value="008">Lampung</option>
-                                                <option value="070">Langsa</option>
-                                                <option value="071">Lhokseumawe</option>
-                                                <option value="072">Lubuklinggau</option>
-                                                <option value="022">Madiun</option>
-                                                <option value="023">Magelang</option>
-                                                <option value="024">Makassar</option>
-                                                <option value="025">Malang</option>
-                                                <option value="026">Manado</option>
-                                                <option value="027">Mataram</option>
-                                                <option value="028">Medan</option>
-                                                <option value="073">Metro</option>
-                                                <option value="068">Mobagu</option>
-                                                <option value="029">Mojokerto</option>
-                                                <option value="999">Other</option>
-                                                <option value="030">Padang</option>
-                                                <option value="074">Padangpanjang</option>
-                                                <option value="075">Padangsidempuan</option>
-                                                <option value="076">PagarAlam</option>
-                                                <option value="031">Palangka Raya</option>
-                                                <option value="032">Palembang</option>
-                                                <option value="077">Palopo</option>
-                                                <option value="078">Palu</option>
-                                                <option value="079">Pangkal Pinang</option>
-                                                <option value="080">Parepare</option>
-                                                <option value="081">Pariaman</option>
-                                                <option value="082">Pasuruan</option>
-                                                <option value="083">Payakumbuh</option>
-                                                <option value="033">Pekalongan</option>
-                                                <option value="034">Pekanbaru</option>
-                                                <option value="084">Pematangsiantar</option>
-                                                <option value="035">Pontianak</option>
-                                                <option value="085">Prabumulih</option>
-                                                <option value="036">Probolinggo</option>
-                                                <option value="103">Purwakarta</option>
-                                                <option value="050">Purwokerto</option>
-                                                <option value="086">Sabang</option>
-                                                <option value="087">Salatiga</option>
-                                                <option value="037">Samarinda</option>
-                                                <option value="088">Sawahlunto</option>
-                                                <option value="038">Semarang</option>
-                                                <option value="039">Serang</option>
-                                                <option value="089">Sibolga</option>
-                                                <option value="090">Singkawang</option>
-                                                <option value="042">Solo</option>
-                                                <option value="091">Solok</option>
-                                                <option value="092">Sorong</option>
-                                                <option value="093">Subulussalam</option>
-                                                <option value="040">Sukabumi</option>
-                                                <option value="094">SungaiPenuh</option>
-                                                <option value="041">Surabaya</option>
-                                                <option value="044">Tangerang</option>
-                                                <option value="043">Tangerang Selatan</option>
-                                                <option value="045">Tanjung Pinang</option>
-                                                <option value="095">Tanjungbalai</option>
-                                                <option value="096">Tarakan</option>
-                                                <option value="046">Tasikmalaya</option>
-                                                <option value="047">Tebingtinggi</option>
-                                                <option value="048">Tegal</option>
-                                                <option value="097">Ternate</option>
-                                                <option value="098">TidoreKepulauan</option>
-                                                <option value="099">Tomohon</option>
-                                                <option value="100">Tual</option>
-                                                <option value="049">Yogyakarta</option>
+                                                <?php foreach($city as $item) : ?>
+                                                <option value="<?= $item['id'] ?>"><?= $item['name'] ?></option>
+                                                <?php endforeach ?>
                                             </select>
                                         </div>
                                     </li>
@@ -372,3 +238,4 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.cgv.id/assets/js/plugins/jquery-ui-1.10.4.custom.min.js"></script>

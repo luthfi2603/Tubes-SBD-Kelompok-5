@@ -1,67 +1,60 @@
+<?php
+    $jumlahDataPerHalaman = 5;
+    $jumlahSemuaData = count(tampilkan("SELECT * FROM promotion"));
+    $jumlahHalaman = ceil($jumlahSemuaData / $jumlahDataPerHalaman);
+    $halamanAktif = (isset($_GET["hal"])) ? $_GET["hal"] : 1;
+    $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
+
+    $data = tampilkan("SELECT * FROM promotion LIMIT $awalData, $jumlahDataPerHalaman");
+?>
 <div class="main-body-container">
     <div class="body-wrapper">
         <div class="promo-list-wrapper">
-            <div class="promo-section">
-                <a href="/cgv?p=detail-promotion">
-                    <img src="assets/images/promotion.jpg">
-                    <div class="promo-body">
-                        <h2>Dapatkan Cashback 100% nonton Jin & Jun pakai QRIS Livin by Mandiri</h2>
-                        <div class="promo-more"> Read More</div>
-                    </div>
-                </a>
-            </div>
-            <div class="promo-section">
-                <a href="https://www.cgv.id/en/promotion/detail/PR202304210242534110">
-                    <img src="assets/images/promotion.jpg">
-                    <div class="promo-body">
-                        <h2>Dapatkan Cashback 50% nonton Jin & Jun pakai QRIS Livin by Mandiri</h2>
-                        <div class="promo-more">Read More</div>
-                    </div>
-                </a>
-            </div>
-            <div class="promo-section">
-                <a href="https://www.cgv.id/en/promotion/detail/PR202304200317155867">
-                    <img src="assets/images/promotion2.jpg">
-                    <div class="promo-body">
-                        <h2>Dapatkan Cashback 100% nonton Sewu dino pakai QRIS Livin by Mandiri</h2>
-                        <div class="promo-more"> Read More</div>
-                    </div>
-                </a>
-            </div>
-            <div class="promo-section">
-                <a href="https://www.cgv.id/en/promotion/detail/PR202304190149443995">
-                    <img src="assets/images/promotion2.jpg">
-                    <div class="promo-body">
-                        <h2>Dapatkan Cashback 50% nonton Sewu Dino pakai QRIS livin by mandiri</h2>
-                        <div class="promo-more">Read More</div>
-                    </div>
-                </a>
-            </div>
-            <div class="promo-section">
-                <a href="https://www.cgv.id/en/promotion/detail/PR202304181513339724">
-                    <img src="assets/images/promotion3.jpg">
-                    <div class="promo-body">
-                        <h2>CGV Movie Passport - Kumpulkan stampnya dan redeem hadiahnya!</h2>
-                        <div class="promo-more">Read More</div>
-                    </div>
-                </a>
-            </div>
+            <?php foreach($data as $row) : ?>
+                <div class="promo-section">
+                    <a href="/cgv?p=detail-promotion&id=<?= $row['id'] ?>">
+                        <img src="assets/images/<?= $row['promotion_img'] ?>">
+                        <div class="promo-body">
+                            <h2><?= $row['judul'] ?></h2>
+                            <div class="promo-more"> Read More</div>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach ?>
             <nav aria-label="Page navigation" class="pull-right">
                 <ul class="pagination">
-                    <li class="page-item active">
-                        <a class="page-link" href="javscript:void(0);">1</a>
-                    </li>
                     <li class="page-item">
-                        <a href="/cgv?p=promotion2" class="page-link" rel="next">2</a>
+                        <a class="page-link" href="
+                            <?php
+                                if($halamanAktif == 1){
+                                    echo"javscript:void(0);";
+                                }else{
+                                    echo"?p=promotion&hal=".($halamanAktif - 1)."";
+                                }
+                            ?>
+                        "><< Previous</a>
                     </li>
+                    <?php for($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+                        <?php if($i == $halamanAktif) : ?>
+                            <li class="page-item active">
+                                <a href="javscript:void(0);"><?= $i ?></a>
+                            </li>
+                        <?php else : ?>
+                            <li class="page-item">
+                                <a href="?p=promotion&hal=<?= $i ?>" class="page-link" rel="next"><?= $i ?></a>
+                            </li>
+                        <?php endif ?>
+                    <?php endfor ?>
                     <li class="page-item">
-                        <a href="/cgv?p=promotion3" class="page-link" rel="next">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="/cgv?p=promotion4" class="page-link" rel="next">4</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="/cgv?p=promotion2" class="page-link">Next >></a>
+                        <a href="
+                            <?php
+                                if($halamanAktif == $jumlahHalaman){
+                                    echo"javscript:void(0);";
+                                }else{
+                                    echo"?p=promotion&hal=".($halamanAktif + 1)."";
+                                }
+                            ?>
+                        " class="page-link">Next >></a>
                     </li>
                 </ul>
             </nav>

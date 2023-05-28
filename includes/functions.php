@@ -30,8 +30,8 @@
         $cardNo = $data["cardNo"];
         $pin = $data["pin"];
 
-        $cekEmail = mysqli_query($conn, "SELECT email_address FROM user WHERE email_address = '$email'");
-        $cekUsername = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
+        $cekEmail = mysqli_query($conn, "SELECT email_address FROM users WHERE email_address = '$email'");
+        $cekUsername = mysqli_query($conn, "SELECT username FROM users WHERE username = '$username'");
 
         if(mysqli_num_rows($cekEmail) > 0){
             echo"
@@ -49,7 +49,7 @@
             // enkripsi password
             $pass = password_hash($pass, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO user
+            $sql = "INSERT INTO users
                         (nama, no_hp, username, gender, city, email_address, birthdate,
                         preferred_cinema, pin, card_no, password)
                         VALUES (
@@ -343,7 +343,7 @@
         global $email;
         $email_login = strtolower($data["email"]);
         $pass_login = mysqli_real_escape_string($conn, $data["password"]);
-        $query = "SELECT * FROM user WHERE email_address = '$email_login'";
+        $query = "SELECT * FROM users WHERE email_address = '$email_login'";
         $hasil = mysqli_query($conn, $query);
 
         // cek email
