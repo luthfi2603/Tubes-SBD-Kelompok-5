@@ -349,7 +349,7 @@
         // cek email
         if(mysqli_num_rows($hasil) === 1){
             foreach($hasil as $isi){
-                $id = $isi['id_user'];
+                $id = $isi['id'];
                 $user = $isi['username'];
                 $email = $isi['email_address'];
                 $pass = $isi['password'];

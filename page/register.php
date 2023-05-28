@@ -16,7 +16,7 @@
         }
     }
 
-    $city = tampilkan("SELECT * FROM cities ORDER BY name ASC");
+    $city = tampilkan("SELECT * FROM cities ORDER BY city_name ASC");
 ?>
 <div class="main-body-container">
     <div class="body-wrapper">
@@ -49,7 +49,7 @@
                                                 <select name="pref_city" id="citySelector" style="height: 30px;width: 100px;float: left;">
                                                     <option value="">All</option>
                                                     <?php foreach($city as $item) : ?>
-                                                    <option value="<?= $item['name'] ?>"><?= $item['name'] ?></option>
+                                                    <option value="<?= $item['city_name'] ?>"><?= $item['city_name'] ?></option>
                                                     <?php endforeach ?>
                                                 </select>
                                                 <select name="pcinema" style="height: 30px;width: 160px;float: right;">
@@ -173,7 +173,7 @@
                                             <select id="inputCity" name="kota" style="height:30px;">
                                                 <option value>-- Select City --</option>
                                                 <?php foreach($city as $item) : ?>
-                                                <option value="<?= $item['id'] ?>"><?= $item['name'] ?></option>
+                                                <option value="<?= $item['city_id'] ?>"><?= $item['city_name'] ?></option>
                                                 <?php endforeach ?>
                                             </select>
                                         </div>
