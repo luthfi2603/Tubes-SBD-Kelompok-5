@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GoMarket Admin</title>
+    <title>CGV Admin</title>
     <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
