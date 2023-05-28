@@ -3,7 +3,7 @@
         session_start();
     }
 
-    $conn = mysqli_connect("localhost", "root", "", "cgv");
+    $conn = mysqli_connect("localhost", "root", "", "cgv2");
 
     function tampilkan($query){
         global $conn;
@@ -222,37 +222,18 @@
     function ubah($data){
         global $conn;
         $id = $data["id"];
-        $username = strtolower($data["username"]);
-        $email = strtolower($data["email"]);
-        $gambarLama = $data["gambarLama"];
         $nama = $data["nama"];
-        $gender = $data["gender"];
-        $kota = $data["kota"];
-        $provinsi = $data["provinsi"];
-        $noHp = $data["noHp"];
-        $kodePos = $data["kodePos"];
-        $alamat = $data["alamat"];
+        $username = strtolower($data["username"]);
+        $idCard = $data["id_card"];
+        $kota = $data["city"];
+        $alamat = $data["address"];
 
-        if($_FILES["img"]["error"] === 4){
-            $img = $gambarLama;
-        }else{
-            $img = upload();
-            if(!$img){
-                return false;
-            }
-        }
-
-        $query = "UPDATE akun SET
-                    username = '$username',
-                    email = '$email',
-                    img = '$img',
+        $query = "UPDATE users SET
                     nama = '$nama',
-                    jenis_kelamin = '$gender',
-                    kota = '$kota',
-                    provinsi = '$provinsi',
-                    no_hp = '$noHp',
-                    kode_pos = '$kodePos',
-                    alamat = '$alamat'
+                    username = '$username',
+                    card_no = '$idCard',
+                    city = '$kota',
+                    address = '$alamat'
                     WHERE id = $id
                 ";
         mysqli_query($conn, $query);

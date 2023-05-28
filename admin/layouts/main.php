@@ -1,8 +1,11 @@
 <?php
     if(@$_GET){
         switch($_GET["p"]){
+            case"users":
+                include 'users/akun.php';
+                break;
             case"movies":
-                include "page/movies.php";
+                include 'movies/index.php';
                 break;
             default:
                 echo'

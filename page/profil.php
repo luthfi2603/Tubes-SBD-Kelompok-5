@@ -10,7 +10,7 @@
             <div class="vcard-profile">
                 <a href="#" class="vcard-picture"><img src="https://cdn.cgv.id/assets/images/profile-blank.png" /></a>
                 <div class="vcard-name">
-                    <span><?= $data['nama'] ?> <img src="https://cdn.cgv.id/assets/images/not_verified_icon_text.svg" alt=""></span> <a href="https://www.cgv.id/en/membership/edit_profile">Edit Profile</a>
+                    <span><?= $data['nama'] ?> <img src="https://cdn.cgv.id/assets/images/not_verified_icon_text.svg" alt=""></span> <a href="/cgv?p=edit-profil">Edit Profile</a>
                 </div>
                 <div class="vcard-info">
                     <ul>
@@ -36,11 +36,11 @@
         <div class="profile-nav">
             <ul>
                 <li class="parent-nav">My CGV</li>
-                <li class="parent-nav"><a href="https://www.cgv.id/en/membership/profile">My Profile</a></li>
+                <li class="parent-nav"><a href="#">My Profile</a></li>
             </ul>
         </div>
         <div class="profile-body">
-            <h2>My Profile <a href="https://www.cgv.id/en/membership/edit_profile"><i class="fa fa-edit"></i> Edit Profile</a></h2>
+            <h2>My Profile <a href="/cgv?p=edit-profil"><i class="fa fa-edit"></i> Edit Profile</a></h2>
             <div class="my-profile-group">
                 <ul>
                     <li>Email<span>: <?= $data['email_address'] ?></span></li>

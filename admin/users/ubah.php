@@ -1,8 +1,8 @@
 <?php
  $conn = mysqli_connect("localhost", "root", "", "cgv");
         
-$id = $_POST['id_user'];
-$query = "SELECT * FROM user WHERE id_user=$id";
+$id = $_POST['id'];
+$query = "SELECT * FROM users WHERE id=$id";
 $result = mysqli_query($conn, $query);
 
 foreach ($result as $data) {
@@ -14,7 +14,7 @@ foreach ($result as $data) {
         <th colspan="2" style="text-align: center">Update Akun</th>
       </tr>
       <tr>
-        <input type="hidden" name="id_user" value="<?php echo $data['id_user']; ?>">
+        <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
         <td>Username</td>
         <td><input type="text" name="username" value="<?php echo $data['username']; ?>"></td>
         <td>Password</td>
