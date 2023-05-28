@@ -1,40 +1,39 @@
+<?php
+    $id = $_GET['id'];
+    $data = tampilkan("SELECT * FROM movies WHERE id = $id")[0];
+?>
 <div class="main-body-container skin">
     <div class="body-wrapper">
         <div class="movie-detail-body">
             <div class="trailer-wrapper">
                 <div class="poster-section left">
-                    <img src="https://cdn.cgv.id/uploads/movie/compressed/23009000.jpg" />
+                    <img src="assets/images/<?= $data['poster'] ?>">
                 </div>
                 <div class="trailer-section">
                     <div class="video_thumb_section">
-                        <img src="https://img.youtube.com/vi/CXe9y3jRho4/0.jpg" width="655" height="450" />
-                        <div class="trailer-btn-wrapper">
-                            <img src="https://cdn.cgv.id/assets/images/play_btn.png" onclick="playTrailer('https://www.youtube.com/embed/CXe9y3jRho4')" />
-                        </div>
+                        <img src="assets/images/<?= $data['trailer'] ?>" width="655" height="450" />
                     </div>
                 </div>
                 <div class="clear"></div>
             </div>
             <div class="movie-info-wrapper">
                 <div class="movie-info-title">
-                    GUARDIANS OF THE GALAXY VOL. 3
+                    <?= $data['title'] ?>
                 </div>
                 <div class="synopsis-section">
                     <div class="movie-add-info left">
                         <ul>
-                            <li>STARRING : Chris Pratt, Zoe Saldana, Dave Bautista</li>
-                            <li>DIRECTOR : James Gunn</li>
-                            <li>CENSOR RATING : 13+</li>
-                            <li>GENRE : ACTION</li>
-                            <li>LANGUAGE : English</li>
-                            <li>SUBTITLE : BAHASA INDONESIA</li>
-                            <li>DURATION : 150 Minutes</li>
+                            <li>STARRING : <?= $data['starring'] ?></li>
+                            <li>DIRECTOR : <?= $data['director'] ?></li>
+                            <li>CENSOR RATING : <?= $data['censor_rating'] ?></li>
+                            <li>GENRE : <?= $data['genre'] ?></li>
+                            <li>LANGUAGE : <?= $data['language'] ?></li>
+                            <li>SUBTITLE : <?= $data['subtitle'] ?></li>
+                            <li>DURATION : <?= $data['duration'] ?></li>
                         </ul>
                     </div>
                     <div class="movie-synopsis right">
-                        Masih bersedih karena kehilangan Gamora, Peter Quill mengumpulkan timnya untuk mempertahankan alam semesta dan salah satu dari mereka, sebuah misi yang bisa menjadi akhir dari Penjaga jika tidak berhasil.<br />
-                        <br />
-                        Still reeling from the loss of Gamora, Peter Quill rallies his team to defend the universe and one of their own - a mission that could mean the end of the Guardians if not successful.
+                        <?= $data['description'] ?>
                     </div>
                     <div class="clear"></div>
                 </div>

@@ -3,7 +3,7 @@
         session_start();
     }
 
-    $conn = mysqli_connect("localhost", "root", "", "cgv2");
+    $conn = mysqli_connect("localhost", "root", "", "cgv");
 
     function tampilkan($query){
         global $conn;

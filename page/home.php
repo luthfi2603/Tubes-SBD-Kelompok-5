@@ -52,13 +52,13 @@
             <div class="slider-banner">
                 <ul>
                     <li>
-                        <a href="https://www.cgv.id/en/special_audi/detail/SA202206230951458424" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'f&amp;b']);" target="_blank" style="display: block; height: 140px; width: 240px; background-image: url('https://cdn.cgv.id/uploads/marketing/2210/BN202210241521524025.jpg');"></a>
+                        <a href="/cgv?p=detail-special&id=18" style="display: block; height: 140px; width: 240px; background-image: url('https://cdn.cgv.id/uploads/marketing/2210/BN202210241521524025.jpg');"></a>
                     </li>
                     <li>
-                        <a href="https://www.cgv.id/en/special_audi/detail/SA202206230950056253" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'how to ticket']);" target="_blank" style="display: block; height: 140px; width: 240px; background-image: url('https://cdn.cgv.id/uploads/marketing/2301/BN202301131030571731.jpg');"></a>
+                        <a href="/cgv?p=detail-special&id=17" style="display: block; height: 140px; width: 240px; background-image: url('https://cdn.cgv.id/uploads/marketing/2301/BN202301131030571731.jpg');"></a>
                     </li>
                     <li>
-                        <a href="https://www.cgv.id/en/special_audi/detail/SA202207121601355064" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'quick print']);" target="_blank" style="display: block; height: 152px; width: 240px; background-image: url('https://cdn.cgv.id/uploads/marketing/2211/BN202211151605207322.jpg');"></a>
+                        <a href="/cgv?p=detail-special&id=22" style="display: block; height: 152px; width: 240px; background-image: url('https://cdn.cgv.id/uploads/marketing/2211/BN202211151605207322.jpg');"></a>
                     </li>
                 </ul>
             </div>
@@ -97,64 +97,6 @@
                     </ul>
                 </div>
                 <div class="carousel-nav"><a href="" class="new-flex-next">next</a><a href="" class="new-flex-prev">previous</a></div>
-            </div>
-        </div>
-        <div class="home-event-wrapper">
-            <div class="home-event-header">
-                <h2>event</h2>
-            </div>
-            <div class="home-event-body">
-                <div class="home-event-menu">
-                    <ul id="home-event-tab" role="tablist">
-                        <li class="active"><a href="#promotions" role="tab" data-toggle="tab"><span>Promotions</span></a></li>
-                        <li><a href="#events" role="tab" data-toggle="tab"><span>News</span></a></li>
-                    </ul>
-                </div>
-                <div class="home-event-container">
-                    <div role="tabpanel" class="tab-pane fade active" id="promotions">
-                        <ul>
-                            <li>
-                                <a href="https://www.cgv.id/en/promotion/detail/PR202304050750482328">
-                                    <img class="lazy" src="https://cdn.cgv.id/uploads/promotions/2304/PR202304050750482328_thumb.jpg" style="display: inline-block;">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.cgv.id/en/promotion/detail/PR202304050711542831">
-                                    <img class="lazy" src="https://cdn.cgv.id/uploads/promotions/2304/PR202304050711542831_thumb.jpg" style="display: inline-block;">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.cgv.id/en/promotion/detail/PR202303310852119278">
-                                    <img class="lazy" src="https://cdn.cgv.id/uploads/promotions/2303/PR202303310852119278_thumb.jpg" style="display: inline-block;">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.cgv.id/en/promotion/detail/PR202303310146034538">
-                                    <img class="lazy" src="https://cdn.cgv.id/uploads/promotions/2303/PR202303310146034538_thumb.jpg" style="display: inline-block;">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="events">
-                        <ul>
-                            <li>
-                                <a href="https://www.cgv.id/en/events/detail/EV202304190142102526">
-                                    <img class="lazy" src="https://cdn.cgv.id/uploads/events/2304/EV202304190142102526_thumb.jpg" style="display: inline-block;">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.cgv.id/en/events/detail/EV202304180742346390">
-                                    <img class="lazy" src="https://cdn.cgv.id/uploads/events/2304/EV202304180742346390_thumb.jpg" style="display: inline-block;">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.cgv.id/en/events/detail/EV202212230345494466">
-                                    <img class="lazy" src="https://cdn.cgv.id/uploads/events/2212/EV202212230345494466_thumb.jpg" style="display: inline-block;">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

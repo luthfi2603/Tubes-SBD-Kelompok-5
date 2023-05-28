@@ -1,7 +1,6 @@
 <?php
     $id = $_GET['id'];
     $data = tampilkan("SELECT * FROM promotion WHERE id = $id")[0];
-    // var_dump($id); die;
 ?>
 <div class="main-body-container">
     <div class="body-wrapper">
