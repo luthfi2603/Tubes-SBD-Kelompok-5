@@ -6,7 +6,7 @@
 </div>
 <div class="table-responsive">
     <a href="/admin/products/add" class="btn btn-primary mb-3">Add new movie</a>
-    <table class="table table-striped table-sm text-center align-middle">
+    <table class="table table-striped table-sm text-center align-middle mb-5">
         <thead>
             <tr>
                 <th scope="col">#</th>

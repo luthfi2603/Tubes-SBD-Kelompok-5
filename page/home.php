@@ -1,36 +1,23 @@
+<?php
+    $data = tampilkan("SELECT * FROM movies LIMIT 0, 5");
+    $data2 = tampilkan("SELECT * FROM movies");
+?>
 <div class="main-body-container skin">
     <div class="body-wrapper">
         <div class="slider-wrapper">
             <section class="slider">
                 <div class="slideshow" style="height:450px;">
-
                     <div class="flex-viewport" style="overflow: hidden; position: relative;">
                         <ul class="slides" style="width: 1000%; margin-left: -1460px;">
-                            <li style="width: 730px; float: left; display: block;">
-                                <a href="https://www.cgv.id/en/movies/info/23010000" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 01']);" target="_blank">
-                                    <img class="lazy" onload="_gaq.push(['_trackEvent', 'slider', 'impression', 'Slider 01']);" height="450" draggable="false" src="https://cdn.cgv.id/uploads/marketing/2305/BN202305170859357268.jpg" style="display: block;">
-                                </a>
-                            </li>
-                            <li style="width: 730px; float: left; display: block;">
-                                <a href="https://www.cgv.id/en/movies/info/23009000" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 02']);" target="_blank">
-                                    <img class="lazy" onload="_gaq.push(['_trackEvent', 'slider', 'impression', 'Slider 02']);" height="450" draggable="false" src="https://cdn.cgv.id/uploads/marketing/2305/BN202305112207246192.jpg" style="display: block;">
-                                </a>
-                            </li>
-                            <li style="width: 730px; float: left; display: block;">
-                                <a href="https://www.cgv.id/en/movies/info/23007700" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 03']);" target="_blank">
-                                    <img class="lazy" onload="_gaq.push(['_trackEvent', 'slider', 'impression', 'Slider 03']);" height="450" draggable="false" src="https://cdn.cgv.id/uploads/marketing/2305/BN202305170855134729.jpg" style="display: block;">
-                                </a>
-                            </li>
-                            <li style="width: 730px; float: left; display: block;">
-                                <a href="https://www.cgv.id/en/movies/info/23009700" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 04']);" target="_blank">
-                                    <img class="lazy" onload="_gaq.push(['_trackEvent', 'slider', 'impression', 'Slider 04']);" height="450" draggable="false" src="https://cdn.cgv.id/uploads/marketing/2305/BN202305050913084763.jpg" style="display: block;">
-                                </a>
-                            </li>
-                            <li style="width: 730px; float: left; display: block;">
-                                <a href="https://www.cgv.id/en/movies/info/23010100" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 05']);" target="_blank">
-                                    <img class="lazy" onload="_gaq.push(['_trackEvent', 'slider', 'impression', 'Slider 05']);" height="450" draggable="false" src="https://cdn.cgv.id/uploads/marketing/2305/BN202305112209141933.jpg" style="display: block;">
-                                </a>
-                            </li>
+                            <?php $i = 1; ?>
+                            <?php foreach($data as $row) : ?>
+                                <li style="width: 730px; float: left; display: block;">
+                                    <a href="/cgv?p=detail-movie&id=<?= $row['id'] ?>" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 0'.<?= $i ?>.'']);" target="_blank">
+                                        <img class="lazy" onload="_gaq.push(['_trackEvent', 'slider', 'impression', 'Slider 01']);" height="450" draggable="false" src="assets/images/<?= $row['trailer'] ?>" style="display: block;">
+                                    </a>
+                                </li>
+                                <?php $i++; ?>
+                            <?php endforeach ?>
                         </ul>
                     </div>
                     <ul class="flex-direction-nav">
@@ -72,8 +59,14 @@
                 <div class="carousel sel-body">
                     <div class="flex-viewport" style="overflow: hidden; position: relative;">
                         <ul class="slides" style="width: 2400%; transition-duration: 0s; transform: translate3d(-1999px, 0px, 0px);">
-                            <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23010000"><img src="https://cdn.cgv.id/uploads/movie/compressed/23010000.jpg" draggable="false"></a></li>
-                            <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23011200"><img src="https://cdn.cgv.id/uploads/movie/compressed/23011200.jpg" draggable="false"></a></li>
+                            <?php foreach($data2 as $row) : ?>
+                                <li style="width: 240px; float: left; display: block;">
+                                    <a href="/cgv?p=detail-movie&id=<?= $row['id'] ?>">
+                                        <img src="./assets/images/<?= $row['poster'] ?>" draggable="false">
+                                    </a>
+                                </li>
+                            <?php endforeach ?>
+                            <!-- <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23011200"><img src="https://cdn.cgv.id/uploads/movie/compressed/23011200.jpg" draggable="false"></a></li>
                             <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23009000"><img src="https://cdn.cgv.id/uploads/movie/compressed/23009000.jpg" draggable="false"></a></li>
                             <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23009700"><img src="https://cdn.cgv.id/uploads/movie/compressed/23009700.jpg" draggable="false"></a></li>
                             <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23010100"><img src="https://cdn.cgv.id/uploads/movie/compressed/23010100.jpg" draggable="false"></a></li>
@@ -83,7 +76,7 @@
                             <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23006200"><img src="https://cdn.cgv.id/uploads/movie/compressed/23006200.jpg" draggable="false"></a></li>
                             <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23010200"><img src="https://cdn.cgv.id/uploads/movie/compressed/23010200.jpg" draggable="false"></a></li>
                             <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23010900"><img src="https://cdn.cgv.id/uploads/movie/compressed/23010900.jpg" draggable="false"></a></li>
-                            <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23011000"><img src="https://cdn.cgv.id/uploads/movie/compressed/23011000.jpg" draggable="false"></a></li>
+                            <li style="width: 240px; float: left; display: block;"><a href="https://www.cgv.id/en/movies/info/23011000"><img src="https://cdn.cgv.id/uploads/movie/compressed/23011000.jpg" draggable="false"></a></li> -->
                         </ul>
                     </div>
                     <ol class="flex-control-nav flex-control-paging">
@@ -96,7 +89,10 @@
                         <li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
                     </ul>
                 </div>
-                <div class="carousel-nav"><a href="" class="new-flex-next">next</a><a href="" class="new-flex-prev">previous</a></div>
+                <div class="carousel-nav">
+                    <a href="" class="new-flex-next">n</a>
+                    <a href="" class="new-flex-prev">p</a>
+                </div>
             </div>
         </div>
     </div>

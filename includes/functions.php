@@ -207,7 +207,7 @@
     // fungsi untuk menghapus data akun
     function hapus($id){
         global $conn;
-        mysqli_query($conn, "DELETE FROM akun WHERE id = $id");
+        mysqli_query($conn, "DELETE FROM users WHERE id = $id");
         return mysqli_affected_rows($conn);
     }
 
@@ -222,18 +222,9 @@
     function ubah($data){
         global $conn;
         $id = $data["id"];
-        $nama = $data["nama"];
-        $username = strtolower($data["username"]);
-        $idCard = $data["id_card"];
-        $kota = $data["city"];
-        $alamat = $data["address"];
-
+        $level = $data['level'];
         $query = "UPDATE users SET
-                    nama = '$nama',
-                    username = '$username',
-                    card_no = '$idCard',
-                    city = '$kota',
-                    address = '$alamat'
+                        level = $level
                     WHERE id = $id
                 ";
         mysqli_query($conn, $query);

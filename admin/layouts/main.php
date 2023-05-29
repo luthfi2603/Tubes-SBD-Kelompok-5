@@ -7,6 +7,9 @@
             case"movies":
                 include 'movies/index.php';
                 break;
+            case"edit-user":
+                include 'users/ubah.php';
+                break;
             default:
                 echo'
                     <h1>Halaman Tidak Ditemukan</h1>
