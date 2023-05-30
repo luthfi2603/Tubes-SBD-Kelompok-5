@@ -1,6 +1,6 @@
 <?php
     $id = $_GET['id'];
-    $data = tampilkan("SELECT * FROM movies WHERE id = $id")[0];
+    $data = tampilkan("SELECT * FROM movies WHERE movie_id = $id")[0];
 ?>
 <div class="main-body-container skin">
     <div class="body-wrapper">

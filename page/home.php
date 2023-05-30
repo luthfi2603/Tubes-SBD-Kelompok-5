@@ -12,7 +12,7 @@
                             <?php $i = 1; ?>
                             <?php foreach($data as $row) : ?>
                                 <li style="width: 730px; float: left; display: block;">
-                                    <a href="/cgv?p=detail-movie&id=<?= $row['id'] ?>" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 0'.<?= $i ?>.'']);" target="_blank">
+                                    <a href="/cgv?p=detail-movie&id=<?= $row['movie_id'] ?>" onclick="_gaq.push(['_trackEvent', 'slider', 'click', 'Slider 0'.<?= $i ?>.'']);" target="_blank">
                                         <img class="lazy" onload="_gaq.push(['_trackEvent', 'slider', 'impression', 'Slider 01']);" height="450" draggable="false" src="assets/images/<?= $row['trailer'] ?>" style="display: block;">
                                     </a>
                                 </li>
@@ -61,7 +61,7 @@
                         <ul class="slides" style="width: 2400%; transition-duration: 0s; transform: translate3d(-1999px, 0px, 0px);">
                             <?php foreach($data2 as $row) : ?>
                                 <li style="width: 240px; float: left; display: block;">
-                                    <a href="/cgv?p=detail-movie&id=<?= $row['id'] ?>">
+                                    <a href="/cgv?p=detail-movie&id=<?= $row['movie_id'] ?>">
                                         <img src="./assets/images/<?= $row['poster'] ?>" draggable="false">
                                     </a>
                                 </li>

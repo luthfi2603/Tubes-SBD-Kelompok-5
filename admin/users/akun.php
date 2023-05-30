@@ -1,5 +1,5 @@
 <?php
-    $data = tampilkan("SELECT * FROM users a INNER JOIN cities b ON a.city = b.city_id");
+    $data = tampilkan("SELECT * FROM users a INNER JOIN cities b ON a.city = b.city_id WHERE level = 2");
     if(isset($_POST['btnHapus'])){
         $id = $_POST['id'];
         if(hapus($id) > 0){

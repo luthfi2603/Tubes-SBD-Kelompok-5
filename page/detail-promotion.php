@@ -1,6 +1,6 @@
 <?php
     $id = $_GET['id'];
-    $data = tampilkan("SELECT * FROM promotion WHERE id = $id")[0];
+    $data = tampilkan("SELECT * FROM promotion WHERE promotion_id = $id")[0];
 ?>
 <div class="main-body-container">
     <div class="body-wrapper">
@@ -8,7 +8,7 @@
             <div class="promo-section">
                 <img class="banner-image" src="assets/images/<?= $data['promotion_img'] ?>">
                 <div class="promo-body">
-                    <h2><?= $data['judul'] ?></h2>
+                    <h2><?= $data['promotion_title'] ?></h2>
                     <div class="promo-content">
                         <?= $data['promotion_content'] ?>
                     </div>

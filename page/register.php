@@ -17,6 +17,7 @@
     }
 
     $city = tampilkan("SELECT * FROM cities ORDER BY city_name ASC");
+    $cinemas = tampilkan("SELECT * FROM cinemas ORDER BY cinema_name ASC");
 ?>
 <div class="main-body-container">
     <div class="body-wrapper">
@@ -46,85 +47,17 @@
                                                 Preferred Cinema
                                             </label>
                                             <div style="display: block;padding-left: 170px;">
-                                                <select name="pref_city" id="citySelector" style="height: 30px;width: 100px;float: left;">
+                                                <!-- <select name="pref_city" id="citySelector" style="height: 30px;width: 100px;float: left;">
                                                     <option value="">All</option>
-                                                    <?php foreach($city as $item) : ?>
+                                                    <?php // foreach($city as $item) : ?>
                                                     <option value="<?= $item['city_name'] ?>"><?= $item['city_name'] ?></option>
-                                                    <?php endforeach ?>
-                                                </select>
+                                                    <?php // endforeach ?>
+                                                </select> -->
                                                 <select name="pcinema" style="height: 30px;width: 160px;float: right;">
                                                     <option value>--Select Cinema--</option>
-                                                    <option value="001" attr-city="Bandung">Paris Van Java</option>
-                                                    <option value="002" attr-city="Jakarta">Grand Indonesia</option>
-                                                    <option value="003" attr-city="Jakarta">Pasific Place</option>
-                                                    <option value="005" attr-city="Tangerang Selatan">Teras Kota</option>
-                                                    <option value="006" attr-city="Jakarta">Central Park</option>
-                                                    <option value="007" attr-city="Bekasi">Bekasi Cyber Park</option>
-                                                    <option value="008" attr-city="Balikpapan">Plaza Balikpapan</option>
-                                                    <option value="011" attr-city="Bandung">Miko Mall</option>
-                                                    <option value="013" attr-city="Yogyakarta">Jwalk Mall</option>
-                                                    <option value="014" attr-city="Bandung">BEC Mall</option>
-                                                    <option value="015" attr-city="Tangerang">Bandara City Mall</option>
-                                                    <option value="016" attr-city="Cirebon">Grage City Mall</option>
-                                                    <option value="017" attr-city="Yogyakarta">Pakuwon Mall Jogja</option>
-                                                    <option value="018" attr-city="Surabaya">Marvell City</option>
-                                                    <option value="019" attr-city="Karawang">Festive Walk</option>
-                                                    <option value="020" attr-city="Jakarta">Slipi Jaya</option>
-                                                    <option value="021" attr-city="Manado">Grand Kawanua City</option>
-                                                    <option value="022" attr-city="Tangerang">Ecoplaza Citraraya Cikupa</option>
-                                                    <option value="023" attr-city="Mojokerto">Sunrise Mall</option>
-                                                    <option value="024" attr-city="Medan">Focal Point</option>
-                                                    <option value="025" attr-city="Jakarta">Green Pramuka Mall</option>
-                                                    <option value="026" attr-city="Purwokerto">Rita Supermall</option>
-                                                    <option value="027" attr-city="Palembang">Social Market</option>
-                                                    <option value="028" attr-city="Jakarta">Bella Terra Lifestyle Center</option>
-                                                    <option value="029" attr-city="Bandung">23 Paskal Shopping Center</option>
-                                                    <option value="030" attr-city="Depok">Depok Mall</option>
-                                                    <option value="031" attr-city="Yogyakarta">Transmart Maguwo</option>
-                                                    <option value="032" attr-city="Tegal">Transmart Tegal</option>
-                                                    <option value="033" attr-city="Pekanbaru">Transmart Pekanbaru</option>
-                                                    <option value="034" attr-city="Mataram">Transmart Mataram</option>
-                                                    <option value="035" attr-city="Jakarta">Transmart Cempaka Putih</option>
-                                                    <option value="036" attr-city="Bekasi">Bekasi Trade Center</option>
-                                                    <option value="037" attr-city="Jakarta">Aeon Mall JGC</option>
-                                                    <option value="038" attr-city="Bandung">Metro Indah Mall</option>
-                                                    <option value="039" attr-city="Palembang">Transmart Palembang</option>
-                                                    <option value="040" attr-city="Bekasi">Lagoon Avenue Bekasi</option>
-                                                    <option value="041" attr-city="Solo">Transmart Solo</option>
-                                                    <option value="042" attr-city="Cirebon">Transmart Cirebon</option>
-                                                    <option value="043" attr-city="Lampung">Transmart Lampung</option>
-                                                    <option value="045" attr-city="Tangerang Selatan">Transmart Graha Bintaro</option>
-                                                    <option value="046" attr-city="Karawang">Technomart</option>
-                                                    <option value="048" attr-city="Surabaya">BG Junction</option>
-                                                    <option value="049" attr-city="Jakarta">FX Sudirman</option>
-                                                    <option value="051" attr-city="Gresik">Icon Mall Gresik</option>
-                                                    <option value="052" attr-city="Bogor">Vivo Sentul</option>
-                                                    <option value="053" attr-city="Blitar">Blitar Square</option>
-                                                    <option value="055" attr-city="Samarinda">Plaza Mulia</option>
-                                                    <option value="056" attr-city="Karawang">Cikampek Mall</option>
-                                                    <option value="057" attr-city="Batam">Park Avenue Batam</option>
-                                                    <option value="059" attr-city="Purwakarta">Sadang Terminal Square</option>
-                                                    <option value="060" attr-city="Bandung">Kings Shopping Center</option>
-                                                    <option value="064" attr-city="Palembang">PTC Mall</option>
-                                                    <option value="065" attr-city="Tangerang Selatan">Paradise Walk Serpong</option>
-                                                    <option value="066" attr-city="Madiun">Plaza Lawu Madiun</option>
-                                                    <option value="067" attr-city="Kediri">Kediri Mall</option>
-                                                    <option value="068" attr-city="Jakarta">Sunter Mall</option>
-                                                    <option value="069" attr-city="Cikarang">Living Plaza Jababeka</option>
-                                                    <option value="070" attr-city="Probolinggo">Wijaya Kusuma</option>
-                                                    <option value="071" attr-city="Batam">Grand Batam Mall</option>
-                                                    <option value="072" attr-city="Makassar">Panakkukang Square</option>
-                                                    <option value="076" attr-city="Malang">Malang City Point</option>
-                                                    <option value="077" attr-city="Jember">Roxy Square Jember</option>
-                                                    <option value="079" attr-city="Padang">Raya Padang</option>
-                                                    <option value="080" attr-city="Tangerang">Grand Batavia</option>
-                                                    <option value="081" attr-city="Surabaya">Maspion Square</option>
-                                                    <option value="086" attr-city="Jakarta">Buaran Plaza</option>
-                                                    <option value="087" attr-city="Pekanbaru">Holiday Pekanbaru</option>
-                                                    <option value="088" attr-city="Pekanbaru">Studio Pekanbaru</option>
-                                                    <option value="089" attr-city="Tangerang">Mall Ciputra Tangerang</option>
-                                                    <option value="092" attr-city="Jakarta">Poins Mall</option>
-                                                    <option value="094" attr-city="Serang">Ecoplaza Citra Maja Raya</option>
+                                                    <?php foreach($cinemas as $cinema) : ?>
+                                                        <option value="<?= $cinema['cinema_id'] ?>" attr-city="#"><?= $cinema['cinema_name'] ?></option>
+                                                    <?php endforeach ?>
                                                 </select>
                                             </div>
                                         </div>

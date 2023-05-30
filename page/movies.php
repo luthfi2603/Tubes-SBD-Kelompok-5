@@ -6,7 +6,7 @@
         <div class="movie-list-body">
             <ul>
                 <?php foreach($data as $row) : ?>
-                    <li><a href="/cgv?p=detail-movie&id=<?= $row['id'] ?>"><img class="lazy" src="assets/images/<?= $row['poster'] ?>" style="display: inline-block;"></a></li>
+                    <li><a href="/cgv?p=detail-movie&id=<?= $row['movie_id'] ?>"><img class="lazy" src="assets/images/<?= $row['poster'] ?>" style="display: inline-block;"></a></li>
                 <?php endforeach ?>
             </ul>
         </div>

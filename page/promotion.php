@@ -12,10 +12,10 @@
         <div class="promo-list-wrapper">
             <?php foreach($data as $row) : ?>
                 <div class="promo-section">
-                    <a href="/cgv?p=detail-promotion&id=<?= $row['id'] ?>">
+                    <a href="/cgv?p=detail-promotion&id=<?= $row['promotion_id'] ?>">
                         <img src="assets/images/<?= $row['promotion_img'] ?>">
                         <div class="promo-body">
-                            <h2><?= $row['judul'] ?></h2>
+                            <h2><?= $row['promotion_title'] ?></h2>
                             <div class="promo-more"> Read More</div>
                         </div>
                     </a>
