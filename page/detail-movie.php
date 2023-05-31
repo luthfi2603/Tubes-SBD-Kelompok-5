@@ -40,7 +40,7 @@
             </div>
         </div>
         <!-- Hide schedule bar -->
-        <div class="showtimes-wrapper">
+        <!-- <div class="showtimes-wrapper">
             <h4>SCHEDULES <span>*Schedules are subject to change without prior notice</span></h4>
             <div class="sect-schedule">
                 <div class="date-schedule">
@@ -2128,6 +2128,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

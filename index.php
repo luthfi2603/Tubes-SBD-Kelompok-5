@@ -387,6 +387,17 @@
             ?>
         </div>
     </div>
+    <script>
+        <?php
+            if($_GET){
+                if(isset($_GET['cinema_id']) and isset($_GET['date'])){
+                    echo"document.getElementById('schedule').scrollIntoView()";
+                }else if(isset($_GET['cinema_id'])){
+                    echo"document.getElementById('cinema').scrollIntoView()";
+                }
+            }
+        ?>
+    </script>
     <script type="text/javascript" src="https://cdn.cgv.id/assets/js/plugins/jquery.lazy.min.js"></script>
     <script>
         $(function() {
@@ -557,9 +568,9 @@
         }
 
         $("a.active").on("click", function() {
-            $("form").attr("action", "https://www.cgv.id/en/schedule/view_seat_layout" + "/" + $(this).attr("id"));
+            $("form").attr("action", "");
             $("form input[type='submit']").removeAttr('disabled');
-            $("form input[name='cinema']").val($(this).attr("attr-that-cd"));
+            $("form input[name='schedule_time_id']").val($(this).attr("id"));
             $(".showtime-lists li").removeClass('on');
             $(this).parent().addClass('on');
             $("#sum-showtime").html($(this).html());

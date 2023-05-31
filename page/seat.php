@@ -1,3 +1,22 @@
+<?php
+    $schedule_time_id = $_GET['schedule_time_id'];
+    $data = tampilkan("
+        SELECT *
+        FROM `schedule_times` a
+        INNER JOIN `schedule_locations` b ON a.schedule_location_id = b.schedule_location_id
+        INNER JOIN `cinema_auditoriums` c ON b.cinema_auditorium_id = c.cinema_auditorium_id
+        INNER JOIN `schedules` d ON b.schedule_id = d.schedule_id
+        INNER JOIN `movies` e ON d.movie_id = e.movie_id
+        INNER JOIN `cinemas` f ON d.cinema_id = f.cinema_id
+        WHERE a.schedule_time_id = ".$schedule_time_id."
+    ");
+    $dateString = $data[0]['date'];
+    $date = strtotime($dateString);
+    $formattedDate = date("D, d M Y", $date);
+    $timeString = $data[0]['time'];
+    $time = strtotime($timeString);
+    $formattedTime = date('H:i', $time);
+?>
 <div class="main-body-container">
     <div class="body-wrapper">
         <div class="seats-wrapper">
@@ -825,12 +844,6 @@
                 </div>
             </div>
         </div>
-        <div class="seat-conce">
-            <input type="checkbox" name="conce-check" id="conceCheck" checked />
-            <label for="conceCheck" class="todo">
-                Buy your Snacks &amp; Drinks Online <!-- <small>Get 20% Off using CGV Pay</small> -->
-            </label>
-        </div>
     </div>
 
     <div class="booking-info-seats-container">
@@ -839,22 +852,22 @@
             <ul>
                 <li>
                     <div class="sum-booking-movie">
-                        <div class="movie-thumb"><img src="https://cdn.cgv.id/uploads/movie/compressed/23009000.jpg" /></div>
+                        <div class="movie-thumb"><img src="assets/images/<?= $data[0]['poster'] ?>"></div>
                         <ul class="movie-info">
-                            <li><span class="movie-title"> GUARDIANS OF THE GALAXY VOL. 3</li>
+                            <li><span class="movie-title"><?= $data[0]['title'] ?></li>
                             <li>Regular</li>
-                            <li>Category: ACTION</li>
+                            <li>Category: <?= $data[0]['genre'] ?></li>
                         </ul>
                     </div>
                 </li>
                 <li>
                     <div class="sum-booking-cinema">
                         <ul class="cinema-info">
-                            <li class="ellipsis-200">Cinema: <span class="cinema-title">Focal Point</span></li>
-                            <li>Date: <span class="cinema-showdate">Mon, 22 May 2023</span></li>
-                            <li>Time: <span class="cinema-showdate">21:00</span></li>
+                            <li class="ellipsis-200">Cinema: <span class="cinema-title"><?= $data[0]['cinema_name'] ?></span></li>
+                            <li>Date: <span class="cinema-showdate"><?= $formattedDate ?></span></li>
+                            <li>Time: <span class="cinema-showdate"><?= $formattedTime ?></span></li>
                             <li>Screen: <span class="cinema-screen">Regular</span></li>
-                            <li>Audi: <span class="cinema-screen">Audi 3</span></li>
+                            <li>Audi: <span class="cinema-screen"><?= $data[0]['cinema_auditorium_name'] ?></span></li>
                         </ul>
                     </div>
                 </li>

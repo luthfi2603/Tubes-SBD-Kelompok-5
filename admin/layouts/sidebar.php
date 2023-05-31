@@ -16,11 +16,11 @@
                     Movies
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link {{ Request::is('admin/pesanan*') ? 'active' : ''}}" href="/admin/pesanan">
                     Pesanan
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>
