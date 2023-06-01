@@ -10,15 +10,6 @@
             case"promotion":
                 include "page/promotion.php";
                 break;
-            case"promotion2":
-                include "page/promotion2.php";
-                break;
-            case"promotion3":
-                include "page/promotion3.php";
-                break;
-            case"promotion4":
-                include "page/promotion4.php";
-                break;
             case"login":
                 include "page/login.php";
                 break;
@@ -47,8 +38,33 @@
                 include "page/concession.php";
                 break;
             case"seat":
-                include "page/seat.php";
-                break;
+                $schedule_time_id = $_GET['schedule_time_id'];
+                $data = tampilkan("
+                    SELECT *
+                    FROM schedule_times a
+                    INNER JOIN schedule_locations b ON a.schedule_location_id = b.schedule_location_id
+                    INNER JOIN cinema_auditoriums c ON b.cinema_auditorium_id = c.cinema_auditorium_id
+                    INNER JOIN seat_types d ON c.cinema_auditorium_id = d.cinema_auditorium_id
+                    INNER JOIN schedules e on b.schedule_id = e.schedule_id
+                    WHERE a.schedule_time_id = ".$schedule_time_id."
+                ");
+                if($data[0]['seat_type_name'] == 'Regular'){
+                    if($data[0]['date'] == '2023-06-04'){
+                        include "page/seat.php";
+                        break;
+                    }else{
+                        include "page/seat2.php";
+                        break;
+                    }
+                }else{
+                    if($data[0]['date'] == '2023-06-04'){
+                        include "page/seat3.php";
+                        break;
+                    }else{
+                        include "page/seat4.php";
+                        break;
+                    }
+                }
             case"payment":
                 include "page/payment.php";
                 break;
@@ -66,9 +82,6 @@
                 break;
             case"logout":
                 include "includes/logout.php";
-                break;
-            case"admin":
-                include "page/admin/admin.php";
                 break;
             default:
                 echo'

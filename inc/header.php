@@ -84,13 +84,6 @@
                                         <?php endif ?>
                                     </li>
                                     <li>
-                                        <?php if(!empty($_SESSION['username'])) : ?>
-                                            <a href="/cgv?p=snack">CONCESSION</a>
-                                        <?php else : ?>
-                                            <a href="/cgv?p=login">CONCESSION</a>
-                                        <?php endif ?>
-                                    </li>
-                                    <li>
                                         <a href="/cgv?p=special">SPECIAL</a>
                                     </li>
                                 </ul>

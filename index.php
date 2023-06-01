@@ -560,6 +560,7 @@
                 $(".seats-cost").html(accounting.formatMoney(totalPrice + unitPrice, " ", 0));
 
             $("input[name='seats']").val(JSON.stringify(seats));
+            $("input[name='total']").val(totalPrice);
         }
     </script>
     <script>
