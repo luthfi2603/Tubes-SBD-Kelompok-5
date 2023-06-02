@@ -1,5 +1,10 @@
 <?php
-    $data = tampilkan("SELECT * FROM users a INNER JOIN cities b ON a.city = b.city_id WHERE level = 2");
+    $data = tampilkan("
+        SELECT * FROM users a
+        INNER JOIN cities b ON a.city = b.city_id
+        INNER JOIN cinemas c ON b.city_id = c.city_id
+        WHERE level = 2
+    ");
     if(isset($_POST['btnHapus'])){
         $id = $_POST['id'];
         if(hapus($id) > 0){
@@ -22,9 +27,9 @@
     <h1 class="h2">My users</h1>
 </div>
 <div class="table-responsive">
-    <table class="table table-striped table-sm text-center align-middle">
+    <table class="table table-striped table-sm mb-5">
         <thead>
-            <tr class="text-center align-middle">
+            <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nama</th>
                 <th scope="col">No. HP</th>
@@ -52,7 +57,7 @@
                     <td><?= $row['city_name'] ?></td>
                     <td><?= $row['email_address'] ?></td>
                     <td><?= $row['birthdate'] ?></td>
-                    <td><?= $row['preferred_cinema'] ?></td>
+                    <td><?= $row['cinema_name'] ?></td>
                     <td><?= $row['pin'] ?></td>
                     <td><?= $row['card_no'] ?></td>
                     <?php if($row['level'] == 1) : ?>

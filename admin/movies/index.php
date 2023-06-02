@@ -5,8 +5,7 @@
     <h1 class="h2">Movies</h1>
 </div>
 <div class="table-responsive">
-    <a href="/admin/products/add" class="btn btn-primary mb-3">Add new movie</a>
-    <table class="table table-striped table-sm text-center align-middle mb-5">
+    <table class="table table-striped table-sm mb-5">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -21,7 +20,6 @@
                 <th scope="col">Starring</th>
                 <th scope="col">Director</th>
                 <th scope="col">Genre</th>
-                <th scope="col">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -44,12 +42,6 @@
                     <td><?= $row['starring'] ?></td>
                     <td><?= $row['director'] ?></td>
                     <td><?= $row['genre'] ?></td>
-                    <td>
-                        <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
-                        <form action="" method="POST" class="d-inline">
-                            <button class="border-0 badge bg-danger" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
-                        </form>
-                    </td>
                 </tr>
                 <?php $i++; ?>
             <?php endforeach ?>

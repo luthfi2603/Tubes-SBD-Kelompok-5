@@ -1,36 +1,44 @@
+<?php
+    $data = tampilkan("
+        SELECT *
+        FROM tickets a
+        INNER JOIN users b ON a.user_id = b.id
+        INNER JOIN seats c ON a.seat_id = c.seat_id
+        INNER JOIN schedule_times d ON a.schedule_time_id = d.schedule_time_id
+        INNER JOIN schedule_locations e ON d.schedule_location_id = e.schedule_location_id
+        INNER JOIN schedules f ON e.schedule_id = f.schedule_id
+        INNER JOIN cinemas g ON f.cinema_id = g.cinema_id
+        INNER JOIN cinema_auditoriums h ON e.cinema_auditorium_id = h.cinema_auditorium_id
+    ");
+?>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Pesanan</h1>
+    <h1 class="h2">Tickets</h1>
 </div>
 <div class="table-responsive">
-    <table class="table table-striped table-sm text-center align-middle">
+    <table class="table table-striped table-sm mb-5">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Tanggal Pembelian</th>
-                <th scope="col">Kode Pembelian</th>
-                <th scope="col">Jumlah Pembayaran</th>
-                <th scope="col">Status Pembayaran</th>
-                <th scope="col">Status Pengiriman</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Print</th>
+                <th scope="col">User</th>
+                <th scope="col">Cinema</th>
+                <th scope="col">Auditorium</th>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Seat Code</th>
+                <th scope="col">Total</th>
             </tr>
         </thead>
         <tbody>
-            @if($pembelian->count() == 0)
-            <td colspan="8">Tidak ada pembelian</td>
-            @endif
-            @foreach($pembelian as $item)
+            <?php foreach($data as $item) : ?>
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $item->tanggal_pembelian }}</td>
-                    <td>{{ $item->id_pembelian }}</td>
-                    <td>Rp {{ number_format($item->total_pembelian, 0, '.', '.') }}</td>
-                    <td>{{ $item->status_pembayaran }}</td>
-                    <td>{{ $item->status_pembelian }}</td>
-                    <td><a href="{{ route('edit-status', ['pembelian' => $item->id_pembelian]) }}" class="badge bg-warning"><span data-feather="edit"></span></a></td>
-                    <td><a href="{{ route('faktur', ['id' => $item->id_pembelian]) }}" class="badge bg-primary"><span data-feather="printer"></span></a></td>
+                    <td><?= $item['ticket_id'] ?></td>
+                    <td><?= $item['nama'] ?></td>
+                    <td><?= $item['cinema_name'] ?></td>
+                    <td><?= $item['cinema_auditorium_name'] ?></td>
+                    <td><?= $item['date'] ?></td>
+                    <td><?= $item['seat_code'] ?></td>
+                    <td>Rp <?= number_format($item['total'], 0, '.', '.') ?></td>
                 </tr>
-            @endforeach
+            <?php endforeach ?>
         </tbody>
     </table>
 </div>
