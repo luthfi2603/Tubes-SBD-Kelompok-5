@@ -96,22 +96,22 @@
                     <div class="top-menu-section">
                         <ul>
                             <li>
-                                <a href="https://www.cgv.id/en/movies/now_playing">
+                                <a href="/cgv?p=movies">
                                     <img src="https://cdn.cgv.id/assets/images/features/MOVIES.png" alt="Movies" width="100">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.cgv.id/en/schedule/cinema">
+                                <a href="/cgv?p=cinema">
                                     <img src="https://cdn.cgv.id/assets/images/features/CINEMAS.png" alt="Cinemas" width="100">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.cgv.id/en/promotion/all">
+                                <a href="/cgv?p=promotion">
                                     <img src="https://cdn.cgv.id/assets/images/features/PROMO.png" alt="Promotion" width="100">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.cgv.id/en/special_audi">
+                                <a href="/cgv?p=special">
                                     <img src="https://cdn.cgv.id/assets/images/features/FEATURES.png" alt="Features" width="100">
                                 </a>
                             </li>

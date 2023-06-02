@@ -24,12 +24,12 @@
             <h2 class="footer-logo">CGVblitz</h2>
             <div class="footer-menu">
                 <ul>
-                    <li><a href="https://www.cgv.id/en/content/about_us">About Us</a></li>
-                    <li><a href="https://www.cgv.id/en/content/legal_term">Legal Terms</a></li>
-                    <li><a href="https://www.cgv.id/en/content/careers">Careers</a></li>
-                    <li><a href="https://www.cgv.id/en/content/feedback">Feedback</a></li>
-                    <li><a href="https://www.cgv.id/en/content/contact">Contact Us</a></li>
-                    <li><a href="https://www.cgv.id/en/content/investor_relation">Investor Relation</a>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Legal Terms</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Investor Relation</a>
                     </li>
                 </ul>
             </div>

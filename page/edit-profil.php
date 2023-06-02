@@ -1,11 +1,8 @@
 <?php
     $data = tampilkan("SELECT * FROM users a INNER JOIN cities b ON a.city = b.city_id WHERE a.id = " . $_SESSION['id'] . "")[0];
-    // echo"<pre>";
-    // var_dump($data); die;
-    // echo"</pre>";
     $city = tampilkan("SELECT * FROM cities ORDER BY city_name ASC");
     if(isset($_POST['save'])){
-        if(ubah($_POST) > 0){
+        if(ubah2($_POST) > 0){
             echo"
                 <script>
                     alert('Data berhasil diubah');
@@ -53,7 +50,7 @@
         <div class="profile-nav">
             <ul>
                 <li class="parent-nav">My CGV</li>
-                <li class="parent-nav"><a href="#">My Profile</a></li>
+                <li class="parent-nav"><a href="/cgv?p=profil">My Profile</a></li>
             </ul>
         </div>
         <div class="profile-body">

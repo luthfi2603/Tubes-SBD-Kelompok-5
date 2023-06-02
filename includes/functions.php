@@ -218,7 +218,7 @@
         return mysqli_affected_rows($conn);
     }
 
-    // fungsi untuk mengubah data akun
+    // fungsi untuk mengubah data akun oleh admin
     function ubah($data){
         global $conn;
         $id = $data["id"];
@@ -231,34 +231,23 @@
         return mysqli_affected_rows($conn);
     }
 
-    // fungsi untuk mengubah data produk
+    // fungsi untuk mengubah data user
     function ubah2($data){
         global $conn;
-        $id = ($data["id"]);
-        $nama = ($data["nama"]);
-        $harga = ($data["harga"]);
-        $kategori = ($data["kategori"]);
-        $merek = ($data["merek"]);
-        $spesifikasi = ($data["spesifikasi"]);
-        $gambarLama = $data["gambarLama"];
+        $id = $data["id"];
+        $nama = $data["nama"];
+        $username = strtolower($data["username"]);
+        $idCard = $data["id_card"];
+        $kota = $data["city"];
+        $alamat = $data["address"];
 
-        if($_FILES["img"]["error"] === 4){
-            $img = $gambarLama;
-        }else{
-            $img = upload2();
-            if(!$img){
-                return false;
-            }
-        }
-
-        $query = "UPDATE produk SET
-                    nama_produk = '$nama',
-                    harga_produk = '$harga',
-                    kategori_produk = '$kategori',
-                    merek_produk = '$merek',
-                    spesifikasi_produk = '$spesifikasi',
-                    img = '$img'
-                    WHERE id_produk = $id
+        $query = "UPDATE users SET
+                    nama = '$nama',
+                    username = '$username',
+                    card_no = '$idCard',
+                    city = '$kota',
+                    address = '$alamat'
+                    WHERE id = $id
                 ";
         mysqli_query($conn, $query);
         return mysqli_affected_rows($conn);
