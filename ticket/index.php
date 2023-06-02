@@ -1,6 +1,14 @@
 <?php
     require "../includes/functions.php";
-    $ticket_id = $_GET['ticket_id'];
+    if(!isset($_SESSION['ticket_id'])){
+        echo"
+            <script>
+                document.location.href = '/cgv';
+            </script>
+        ";
+    }
+    
+    $ticket_id = $_SESSION['ticket_id'];
     $data = tampilkan("
         SELECT *
         FROM tickets a

@@ -6,7 +6,6 @@
             header('location: /cgv/admin');
         }
     }
-    // var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html>

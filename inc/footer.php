@@ -8,15 +8,15 @@
     <div class="main-footer-wrapper">
         <div class="feature-list">
             <ul>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="dx">4DX</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="screenx">SCREENX</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="spherex">SPHEREX</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="starium">STARIUM</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="dolby">DOLBY ATMOS</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="velvet">VELVET</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="gold">GOLDCLASS</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="satin">SATIN</a></li>
-                <li><a href="https://www.cgv.id/en/movies/now_playing#" class="sweet">SWEETBOX</a></li>
+                <li><a href="#" class="dx">4DX</a></li>
+                <li><a href="#" class="screenx">SCREENX</a></li>
+                <li><a href="#" class="spherex">SPHEREX</a></li>
+                <li><a href="#" class="starium">STARIUM</a></li>
+                <li><a href="#" class="dolby">DOLBY ATMOS</a></li>
+                <li><a href="#" class="velvet">VELVET</a></li>
+                <li><a href="#" class="gold">GOLDCLASS</a></li>
+                <li><a href="#" class="satin">SATIN</a></li>
+                <li><a href="#" class="sweet">SWEETBOX</a></li>
 
             </ul>
         </div>

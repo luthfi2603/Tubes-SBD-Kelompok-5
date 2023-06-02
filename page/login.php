@@ -30,11 +30,6 @@
                                 <div class="input-group">
                                     <input name="login" type="submit" value="Login" class="g-recaptcha" data-sitekey="6LdPw1kUAAAAANnq6qTKBXXUyFzbZbjXdQkZt_4m" data-callback="onSubmit" onclick="loginPushed()" />
                                 </div>
-                                <div class="input-group">
-                                    <div class="forgot-pass">
-                                        <a href="https://www.cgv.id/en/user/forgot_password">Forgot Password?</a>
-                                    </div>
-                                </div>
                             </form>
                         </div>
                         <div class="clear"></div>

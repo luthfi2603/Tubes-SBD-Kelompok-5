@@ -74,10 +74,10 @@
                 ");
 
                 $data3 = mysqli_fetch_assoc($data3);
-
+                $_SESSION['ticket_id'] = $data3['ticket_id'];
                 echo"
                     <script>
-                        document.location.href = '/cgv/ticket?ticket_id=".$data3['ticket_id']."';
+                        document.location.href = '/cgv/ticket';
                     </script>
                 ";
             }

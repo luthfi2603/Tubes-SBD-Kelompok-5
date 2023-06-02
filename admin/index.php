@@ -3,7 +3,6 @@
     if($_SESSION['level'] != 1){
         header('location: /cgv');
     }
-    // var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
