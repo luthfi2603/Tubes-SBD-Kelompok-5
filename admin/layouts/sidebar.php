@@ -2,25 +2,25 @@
     <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin') ? 'active' : ''}}" aria-current="page" href="/cgv/admin">
+                <a class="nav-link" aria-current="page" href="/cgv/admin">
                     Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin/users*') ? 'active' : ''}}" href="/cgv/admin?p=users">
+                <a class="nav-link" href="/cgv/admin?p=users">
                     Users
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin/products*') ? 'active' : ''}}" href="/cgv/admin?p=movies">
+                <a class="nav-link" href="/cgv/admin?p=movies">
                     Movies
                 </a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link {{ Request::is('admin/pesanan*') ? 'active' : ''}}" href="/admin/pesanan">
-                    Pesanan
+            <li class="nav-item">
+                <a class="nav-link" href="/cgv/admin?p=tickets">
+                    Tickets
                 </a>
-            </li> -->
+            </li>
         </ul>
     </div>
 </nav>

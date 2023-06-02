@@ -69,9 +69,15 @@
                 unset($_SESSION['seats']);
                 unset($_SESSION['total']);
 
+                $data3 = mysqli_query($conn, "
+                    SELECT ticket_id FROM tickets ORDER BY ticket_id DESC LIMIT 1
+                ");
+
+                $data3 = mysqli_fetch_assoc($data3);
+
                 echo"
                     <script>
-                        document.location.href = '/cgv';
+                        document.location.href = '/cgv/ticket?ticket_id=".$data3['ticket_id']."';
                     </script>
                 ";
             }
@@ -101,8 +107,8 @@
                         <div class="input-group pull-left">
                             <label for="pembayaran">Masukkan pembayaran</label>
                             <input name="dibayar" type="number" id="pembayaran" list="myCoupon" style="margin-left: 50px; width: 300px; padding: 6px 10px;">
-                            <button name="proceed" type="submit">Bayar</button>
                         </div>
+                        <button name="proceed" type="submit" class="btn red pull-right">Bayar</button>
                         <div class="clear"></div>
                     </div>
                     <div class="clear"></div>

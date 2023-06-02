@@ -10,6 +10,9 @@
             case"edit-user":
                 include 'users/ubah.php';
                 break;
+            case"tickets":
+                include 'tickets/index.php';
+                break;
             default:
                 echo'
                     <h1>Halaman Tidak Ditemukan</h1>
