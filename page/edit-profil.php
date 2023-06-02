@@ -35,14 +35,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="vcard-balance">
+                <!-- <div class="vcard-balance">
                     <h3>Balance</h3>
                     IDR 0
                 </div>
                 <div class="vcard-points">
                     <h3>Points</h3>
                     0 pts
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
