@@ -64,7 +64,7 @@
                     <div class="header-content">
                         <a href="/cgv" class="header-logo" style="display:block;">&nbsp;</a>
                         <div class="header-nav">
-                            <img class="culture-logo" src="https://cdn.cgv.id/assets/images/h2_cultureplex_new_resized.png" style="text-align: center; width: 234px;">
+                            <img class="culture-logo" src="./assets/images/h2_cultureplex_new_resized.png" style="text-align: center; width: 234px;">
                             <nav class="primary_nav_wrap">
                                 <ul>
                                     <li class="current-menu-item">
@@ -97,22 +97,22 @@
                         <ul>
                             <li>
                                 <a href="/cgv?p=movies">
-                                    <img src="https://cdn.cgv.id/assets/images/features/MOVIES.png" alt="Movies" width="100">
+                                    <img src="./assets/images/MOVIES.png" alt="Movies" width="100">
                                 </a>
                             </li>
                             <li>
                                 <a href="/cgv?p=cinema">
-                                    <img src="https://cdn.cgv.id/assets/images/features/CINEMAS.png" alt="Cinemas" width="100">
+                                    <img src="./assets/images/CINEMAS.png" alt="Cinemas" width="100">
                                 </a>
                             </li>
                             <li>
                                 <a href="/cgv?p=promotion">
-                                    <img src="https://cdn.cgv.id/assets/images/features/PROMO.png" alt="Promotion" width="100">
+                                    <img src="./assets/images/PROMO.png" alt="Promotion" width="100">
                                 </a>
                             </li>
                             <li>
                                 <a href="/cgv?p=special">
-                                    <img src="https://cdn.cgv.id/assets/images/features/FEATURES.png" alt="Features" width="100">
+                                    <img src="./assets/images/FEATURES.png" alt="Features" width="100">
                                 </a>
                             </li>
                         </ul>

@@ -65,7 +65,7 @@
             <div class="favorite-wrap">
                 <h3 class="hidden">SHOWTIMES BY THEATERS</h3>
                 <div class="sect-favorite">
-                    <h4><img src="https://cdn.cgv.id/assets/images/logo_small.png" alt="CGV Cinemas"></h4>
+                    <h4><img src="./assets/images/logo_small.png" alt="CGV Cinemas"></h4>
                 </div>
                 <div class="sect-city">
                     <ul>
@@ -105,7 +105,7 @@
                                     Features : <?= $data2[0]['jumlah_auditorium'] ?> Auditoriums |
                                 </div>
                                 <div class="audi_image">
-                                    <img src="https://cdn.cgv.id/assets/images/special_audi/GOLDCLASS.png" alt="Image GOLD CLASS">
+                                    <img src="./assets/images/GOLDCLASS.png" alt="Image GOLD CLASS">
                                 </div>
                             </div>
                             <hr>

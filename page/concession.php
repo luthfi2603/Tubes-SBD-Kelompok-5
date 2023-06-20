@@ -11,7 +11,7 @@
                 <div class="favorite-wrap white">
                     <h3 class="hidden">SHOWTIMES BY THEATERS</h3>
                     <div class="sect-favorite">
-                        <h4><img src="https://cdn.cgv.id/assets/images/logo_small.png" alt="CGV Cinemas"></h4>
+                        <h4><img src="./assets/images/logo_small.png" alt="CGV Cinemas"></h4>
                     </div>
                     <div class="sect-city">
                         <ul>

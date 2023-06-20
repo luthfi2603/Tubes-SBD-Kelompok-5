@@ -1,0 +1,304 @@
+@charset "utf-8";
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+body {
+	background-color: #DDD;
+	word-wrap: break-word;
+}
+
+.clear {
+	clear: both;
+}
+
+.seats-wrapper {
+	font-family: Arial;
+	font-size: 13px;
+	color: #313131;
+	background-color: #f2f0e4;
+	margin: 10px auto;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.seat-conce {
+	width: 240px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 auto 10px auto;
+}
+
+.seat-conce input[type=checkbox] {
+	display:none;
+}
+
+.seat-conce input[type=checkbox] + label:before {
+	font-family: FontAwesome;
+	display: inline-block;
+}
+
+.seat-conce input[type=checkbox] + label:before {
+	content: "\f096";
+	width: 25px;
+}
+
+.seat-conce input[type=checkbox] + label:before {
+	letter-spacing: 5px;
+}
+
+.seat-conce input[type=checkbox]:checked + label:before {
+	content: "\f046";
+	width: 25px;
+}
+
+.seat-conce input[type=checkbox]:checked + label:before {
+	letter-spacing: 5px;
+}
+
+.seat-conce label small{
+    display: block;
+    font-size: 12px;
+}
+
+.seats-err {
+	padding: 10px 0;
+	background: #FF9494;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	font-weight: bold;
+	color: #333;
+	font-size: 16px;
+	font-family: Arial;
+}
+
+.seats-header {
+	position: relative;
+}
+
+.seats-header h4 {
+	background-color: #343434;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: "Helvetica";
+	padding: 5px 0;
+}
+
+.seats-header a {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: "Helvetica";
+}
+
+.seats-header a i {
+	margin-right: 3px;
+}
+
+.seats-section, .cnx-seats-section {
+	margin: 0 auto;
+	padding: 5px 8px;
+}
+
+.seats-section ul.seat-row, .cnx-seats-section ul.seat-row {
+	margin: 0 0 3px 0;
+}
+
+.seats-section ul.seat-row li, .cnx-seats-section ul.seat-row li {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: 0;
+}
+
+.seats-section ul.seat-row li a {
+	display: block;
+	background: #745012;
+	text-align: center;
+	line-height: 18px;
+	font-size: 8px;
+	font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	width: 18px;
+	height: 18px;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	color: #FFF;
+	border-radius: 4px;
+}
+
+.cnx-seats-section ul.seat-row li a {
+	display: block;
+	background: #745012;
+	text-align: center;
+	line-height: 18px;
+	font-size: 8px;
+	font-weight: bold;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	width: 18px;
+	height: 18px;
+	color: #FFF;
+	border-radius: 4px;
+}
+
+.seats-section ul.seat-row li span, .cnx-seats-section ul.seat-row li span {
+	 display: block;
+	 line-height: 18px;
+	 width: 18px;
+	 height: 18px;
+}
+
+.seats-section ul.seat-row li span.taken {
+	background: #c7c7c6;
+	text-align: center;
+	font-size: 9px;
+	font-weight: bold;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	color: #333;
+	border-radius: 4px;
+}
+
+.cnx-seats-section ul.seat-row li span.taken {
+	background: #c7c7c6;
+	text-align: center;
+	font-size: 9px;
+	font-weight: bold;
+	color: #333;
+	border-radius: 4px;
+}
+
+.seattype.disabled {
+	background: #c7c7c6;
+}
+
+.seattype.regular {
+	background: #745012;
+}
+
+ul.seat-row li a.seat_0203, .seattype.seat_0203 { /*Sweetbox*/
+	background: #FF62B0;
+}
+
+ul.seat-row li a.seat_0202, .seattype.seat_0202 { /* 4DX */
+	background: #B55642;
+}
+
+ul.seat-row li a.seat_0204, .seattype.seat_0204 { /* Gold */
+	background: #C0C081;
+}
+
+ul.seat-row li a.seat_0210, .seattype.seat_0210 { /* Couple */
+	background: #ea548d;
+}
+
+ul.seat-row li a.seat_0205, .seattype.seat_0205 { /* Velvet */
+	background: #D297D2;
+}
+
+ul.seat-row li a.seat_0206, .seattype.seat_0206 { /* Velvet Suite */
+	background: #840042;
+}
+
+ul.seat-row li a.seat_0207, .seattype.seat_0207 { /* Satin */
+	background: #0357fc;
+}
+
+ul.seat-row li a.seat_0208, .seattype.seat_0208 { /* Satin Gold */
+	background: #e8f08d;
+}
+
+ul.seat-row li a.seat_0209, .seattype.seat_0209 { /* Satin Velvet */
+	background: #d121ca;
+}
+
+ul.seat-row li a.seat_0211, .seattype.seat_0211 { /* Cushion */
+	background: #008040;
+}
+
+ul.seat-row li a.chosen, .seattype.chosen {
+	background: #e32517!important;
+	color: #FFF;
+}
+
+.audi-screen {
+	width: 100%;
+	text-align: center;
+}
+
+.audi-screen span {
+	display: block;
+	background: url('/assets/images/sprite_blitz.png') no-repeat;
+	background-position: 3px -460px;
+	height: 20px;
+	width: 517px;
+	margin: 0 auto 50px auto;
+	text-indent: -9999px;
+}
+
+.seats-section .audi-seats {
+	max-width: 1120px;
+	margin: 0 auto;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+}
+
+.cnx-seats-section .audi-seats {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+.seats-errmsg {
+	text-align: center;
+	border: solid 1px #DF8F90;
+	padding: 10px 0;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 10px auto 0 auto;
+	width: 100%;
+	background-color: #FFD2D3;
+	border-radius: 5px;
+	color: #9F3A3A;
+}
+
+.sum-booking-movie .movie-thumb {
+	float: left;
+	margin-right: 10px;
+}
+
+.sum-booking-movie .movie-thumb img {
+	height: 105px;
+}
+
+.audi-legend {
+	position: absolute;
+	right: 10px;
+	width: 130px;
+	font-family: "Helvetica";
+}
+
+.legend-list {
+    text-align: left;
+}
+
+.seattype {
+	height: 20px;
+	width: 20px;
+	display: block;
+	float: left;
+	margin: 2px;
+}

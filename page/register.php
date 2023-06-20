@@ -171,4 +171,4 @@
         </div>
     </div>
 </div>
-<script src="https://cdn.cgv.id/assets/js/plugins/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="./assets/js/jquery-ui-1.10.4.custom.min.js"></script>

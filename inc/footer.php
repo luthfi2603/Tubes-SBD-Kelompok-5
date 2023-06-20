@@ -36,7 +36,7 @@
             <div class="footer-address">
                 <div class="ssl-logo-wrap">
                     <a href="https://play.google.com/store/apps/details?id=com.blitz.blitzandapp1&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">
-                    <img alt='Get it on Google Play' src='https://cdn.cgv.id/assets/global/img/en_badge_web_generic.png' width="140"/>
+                    <img alt='Get it on Google Play' src='./assets/images/en_badge_web_generic.png' width="140">
                     </a>
                     <a href="https://itunes.apple.com/id/app/cgv-blitz/id781405923?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:135px;height:38px;margin-bottom: 8px;" target="_blank"></a>
 

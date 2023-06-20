@@ -2,7 +2,7 @@
 	<div class="body-wrapper">
 		<div class="membership-body">
 			<div class="membership-image">
-				<img src="https://cdn.cgv.id/assets/images/membershipp.jpg">
+				<img src="./assets/images/membershipp.jpg">
 			</div>
 			<div class="membership-info-section">
 				<div class="membership-info-group">

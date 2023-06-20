@@ -22,9 +22,9 @@
     <div class="body-wrapper">
         <div class="membership-profile-header">
             <div class="vcard-profile">
-                <a href="#" class="vcard-picture"><img src="https://cdn.cgv.id/assets/images/profile-blank.png" /></a>
+                <a href="#" class="vcard-picture"><img src="./assets/images/profile-blank.png" /></a>
                 <div class="vcard-name">
-                    <span><?= $data['nama'] ?> <img src="https://cdn.cgv.id/assets/images/not_verified_icon_text.svg" alt=""></span> <a href="/cgv?p=edit-profil">Edit Profile</a>
+                    <span><?= $data['nama'] ?> <img src="./assets/images/not_verified_icon_text.svg" alt=""></span> <a href="/cgv?p=edit-profil">Edit Profile</a>
                 </div>
                 <div class="vcard-info">
                     <ul>
@@ -73,13 +73,13 @@
                                 <div class="input-group pull-right not-verified">
                                     <label for="inputEmail">Email</label>
                                     <input type="text" name="email" id="inputEmail" value="<?= $data['email_address'] ?>" placeholder="user@mail.com" readonly="">
-                                    <img class="icon-not-verify" src="https://cdn.cgv.id/assets/images/not_verified_icon.svg" alt="Not Verified Icon" title="Not Verified Email">
+                                    <img class="icon-not-verify" src="./assets/images/not_verified_icon.svg" alt="Not Verified Icon" title="Not Verified Email">
                                     <button type="button" class="btn-verify" id="btn-verify-email">Verify</button>
                                 </div>
                                 <div class="input-group pull-left ">
                                     <label for="inputMobileNo">Mobile No. **</label>
                                     <input type="text" name="mobile" id="inputMobileNo" value="<?= $data['no_hp'] ?>" placeholder="08XXX" readonly="">
-                                    <img class="icon-verified" src="https://cdn.cgv.id/assets/images/verified_icon.svg" width="100" alt="Verified Icon" title="Verified Phone Number">
+                                    <img class="icon-verified" src="./assets/images/verified_icon.svg" width="100" alt="Verified Icon" title="Verified Phone Number">
                                 </div>
                                 <div class="input-group pull-right">
                                     <label for="inputGender">Gender</label>

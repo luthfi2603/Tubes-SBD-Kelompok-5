@@ -8,9 +8,9 @@
     <div class="body-wrapper">
         <div class="membership-profile-header">
             <div class="vcard-profile">
-                <a href="#" class="vcard-picture"><img src="https://cdn.cgv.id/assets/images/profile-blank.png" /></a>
+                <a href="#" class="vcard-picture"><img src="./assets/images/profile-blank.png" /></a>
                 <div class="vcard-name">
-                    <span><?= $data['nama'] ?> <img src="https://cdn.cgv.id/assets/images/not_verified_icon_text.svg" alt=""></span> <a href="/cgv?p=edit-profil">Edit Profile</a>
+                    <span><?= $data['nama'] ?> <img src="./assets/images/not_verified_icon_text.svg" alt=""></span> <a href="/cgv?p=edit-profil">Edit Profile</a>
                 </div>
                 <div class="vcard-info">
                     <ul>

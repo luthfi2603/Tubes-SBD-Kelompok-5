@@ -23,23 +23,14 @@
     <meta name="copyright" content="2015 CJ CGV All Right Reserved">
     <title>CGV Cinemas</title>
     <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://www.cgv.id/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/reset.css" media="all">
-    <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/global/plugins/font-awesome/css/font-awesome.min.css" media="all">
-    <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/style.css?v=0.0.68" media="all">
-    <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/plugins/flexslider.css" media="all">
-    <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/bootstrap.css?v=0.0.1" media="all">
-    <link rel="stylesheet" type="text/css" href="https://cdn.cgv.id/assets/css/seat.css?v=0.0.3" media="all">
-    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
-    <script type="text/javascript" async src="https://ssl.google-analytics.com/ga.js"></script>
-    <script type="text/javascript" src="https://cdn.cgv.id/assets/js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript">
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': 'UU3iQ308T0Yx23sAYEbb3NAsM42QKcitojKJcpCX'
-            }
-        });
-    </script>
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/css/flexslider.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap2.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./assets/css/seat.css" media="all">
+    <script type="text/javascript" src="./assets/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-77119444-1']);
@@ -77,45 +68,6 @@
         fbq('init', '380888722260575'); // Insert your pixel ID here.
         fbq('track', 'PageView');
     </script>
-    <noscript>
-        "<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=380888722260575&ev=PageView&noscript=1" />"
-    </noscript>
-    <script data-ad-client="ca-pub-1505511952227201" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-checked-head="true"></script>
-    <script>
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(setCookie, showError);
-            }
-        }
-
-        function setCookie(position) {
-            var exdays = 15;
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toGMTString();
-            document.cookie = "locationlat=" + position.coords.latitude + ";" + expires + ";path=/";
-            document.cookie = "locationlong=" + position.coords.longitude + ";" + expires + ";path=/";
-
-        }
-
-        function unsetCookie() {
-            document.cookie = "locationlat=; expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
-            document.cookie = "locationlong=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        }
-
-        function showError(error) {
-            if (error.code == error.PERMISSION_DENIED || error.code == error.POSITION_UNAVAILABLE || error.code == error.TIMEOUT || error.code == error.UNKNOWN_ERROR) {
-                unsetCookie();
-            }
-        }
-        getLocation();
-    </script>
-    <script type="text/javascript" async src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/852877016/?random=1681526073796&cv=9&fst=1681526073796&num=1&guid=ON&resp=GooglemKTybQhCsO&eid=375603260%2C466465925%2C512247838&u_h=900&u_w=1440&u_ah=852&u_aw=1440&u_cd=24&u_his=3&u_tz=420&u_java=false&u_nplug=5&u_nmime=2&sendb=1&ig=1&frm=0&url=https%3A%2F%2Fwww.cgv.id%2Fen%2Fmovies%2Fnow_playing&ref=https%3A%2F%2Fwww.cgv.id%2Fen%2Fuser%2Flogin&tiba=Movies%20-%20CGV%20Cinemas&hn=www.googleadservices.com&rfmt=3&fmt=4">
-    </script>
-    <link rel="preload" href="https://adservice.google.co.id/adsid/integrator.js?domain=www.cgv.id" as="script">
-    <script type="text/javascript" src="https://adservice.google.co.id/adsid/integrator.js?domain=www.cgv.id"></script>
-    <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.cgv.id" as="script">
-    <script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.cgv.id"></script>
     <style>
         /* Accordion styles */
         .tabs {
@@ -397,26 +349,7 @@
             }
         ?>
     </script>
-    <script type="text/javascript" src="https://cdn.cgv.id/assets/js/plugins/jquery.lazy.min.js"></script>
-    <script>
-        $(function() {
-            $.ajax({
-                type: 'POST',
-                url: 'https://www.cgv.id/en/loader/home_movie_list',
-                success: function(data) {
-                    $('.movie-list-body').html(data.now_playing);
-                    $('.comingsoon-movie-list-body').html(data.comingsoon);
-
-                    $('.lazy').lazy({
-                        threshold: 0,
-                        onError: function(element) {
-                            console.log('error loading poster movie');
-                        }
-                    });
-                }
-            });
-        });
-    </script>
+    <script type="text/javascript" src="./assets/js/jquery.lazy.min.js"></script>
     <script type='text/javascript'>
         $(".seat-conce").on("click", "#conceCheck", function() {
             if ($("#conceCheck").is(':checked'))
@@ -582,54 +515,10 @@
             }, 1000);
         });
     </script>
-    <script type="text/javascript" src="https://cdn.cgv.id/assets/js/plugins/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="https://cdn.cgv.id/assets/js/plugins/accounting.js"></script>
-    <script type="text/javascript" src="https://cdn.cgv.id/assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdn.cgv.id/assets/js/script.js?v=0.0.19"></script>
-    <ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled">
-        <div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;">
-            <iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Movies - CGV Cinemas_files/ads(4).html" data-google-container-id="a!1" data-load-complete="true"></iframe>
-        </div>
-    </ins>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var google_conversion_id = 852877016;
-        var google_custom_params = window.google_tag_params;
-        var google_remarketing_only = true;
-        /* ]]> */
-    </script>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        goog_snippet_vars = function() {
-            var w = window;
-            w.google_conversion_id = 852877016;
-            w.google_conversion_label = "ute7CPmUnHMQ2L3XlgM";
-            w.google_remarketing_only = false;
-        }
-        // DO NOT CHANGE THE CODE BELOW.
-        goog_report_conversion = function(url) {
-            goog_snippet_vars();
-            window.google_conversion_format = "3";
-            var opt = new Object();
-            opt.onload_callback = function() {
-                if (typeof(url) != 'undefined') {
-                    window.location = url;
-                }
-            }
-            var conv_handler = window['google_trackConversion'];
-            if (typeof(conv_handler) == 'function') {
-                conv_handler(opt);
-            }
-        }
-        /* ]]> */
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/852877016/?guid=ON&amp;script=0" />
-        </div>
-    </noscript>
-    <iframe src="./Movies - CGV Cinemas_files/aframe.html" width="0" height="0" style="display: none;"></iframe>
+    <script type="text/javascript" src="./assets/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="./assets/js/accounting.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/script2.js"></script>
 </body>
-<iframe id="google_esf" name="google_esf" src="./Movies - CGV Cinemas_files/zrt_lookup.html" style="display: none;"></iframe>
 
 </html>
