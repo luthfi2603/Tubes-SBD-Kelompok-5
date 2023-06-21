@@ -31,7 +31,7 @@
                         <a href="#">Sign Up</a>
                     </li>
                 </ul>
-                <div class="tab-content">
+                <div class="tab-content" style="padding:0;">
                     <div role="tabpanel" class="tab-pane active" id="signup">
                         <div class="signup-header">
                             <h5>Create New Account</h5>

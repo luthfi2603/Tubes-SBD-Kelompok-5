@@ -3,7 +3,6 @@
         SELECT * FROM users a
         INNER JOIN cities b ON a.city = b.city_id
         INNER JOIN cinemas c ON b.city_id = c.city_id
-        WHERE level = 2
     ");
     if(isset($_POST['btnHapus'])){
         $id = $_POST['id'];

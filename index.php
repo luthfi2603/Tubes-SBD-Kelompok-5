@@ -69,131 +69,6 @@
         fbq('track', 'PageView');
     </script>
     <style>
-        /* Accordion styles */
-        .tabs {
-            /* border-radius: 8px; */
-            overflow: hidden;
-            /* box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); */
-            padding-right: 5px;
-            font-size: 16px;
-        }
-
-        .tab {
-            width: 100%;
-            /* color: white; */
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            border: .5px solid #ababab;
-        }
-
-        .tab.active {
-            border: .5px solid #e83f33 !important;
-        }
-
-        .tab-label {
-            display: flex;
-            justify-content: space-between;
-            padding: 1em;
-            /* background: #333333; */
-            font-weight: bold;
-            cursor: pointer;
-            /* Icon */
-        }
-
-        /* .tab-label:hover {
-			background: #e83f33;
-		} */
-
-        .tab-label::after {
-            content: "❯";
-            width: 1em;
-            height: 1em;
-            text-align: center;
-            transition: all 0.2s;
-        }
-
-        /* .tab-content {
-            max-height: 0;
-            padding: 0 1em;
-            color: #333;
-            background: transparent;
-            transition: all 0.2s;
-        } */
-
-        .tab-close,
-        .tab-open {
-            display: flex;
-            justify-content: flex-end;
-            padding: 1em;
-            font-size: 0.75em;
-            /* background: #e83f33; */
-            cursor: pointer;
-        }
-
-        /* .tab-close:hover {
-			background: #1a252f;
-		} */
-
-        /* input:checked+.tab {
-			border: .5px solid #e83f33!important;
-		} */
-
-        input:checked+.tab-label::after {
-            transform: rotate(90deg);
-        }
-
-        input:checked~.tab-content {
-            max-height: 100vh;
-            padding: 1em;
-        }
-
-        .toggle-label {
-            color: #000000;
-        }
-
-        .payment-options-check {
-            position: absolute;
-            opacity: 0;
-            z-index: -1;
-        }
-
-        .list-decimal {
-            list-style-type: decimal;
-            font-size: 16px;
-            padding-left: 30px;
-            line-height: 30px;
-        }
-
-        .table-benefit {
-            border-collapse: collapse;
-            width: 100%;
-            font-size: 16px;
-            color: #333;
-        }
-
-        .table-benefit td,
-        .table-benefit th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        .table-benefit tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        .table-benefit tr:hover {
-            background-color: #ddd;
-        }
-
-        .table-benefit th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #afafaf;
-            color: black;
-        }
-
         .cover_cinema {
             position: relative;
             height: 654px;
@@ -307,6 +182,265 @@
 
         .seat-legend-name {
             display: inline;
+        }
+
+        /* Accordion styles */
+		.tabs {
+			/* border-radius: 8px; */
+			overflow: hidden;
+			/* box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); */
+			padding-right: 5px;
+			font-size: 16px;
+		}
+
+		.tab {
+			width: 100%;
+			/* color: white; */
+			overflow: hidden;
+			border-radius: 10px;
+			margin-bottom: 10px;
+			border: .5px solid #ababab;
+		}
+
+		.tab.active {
+			border: .5px solid #e83f33!important;
+		}
+
+		.tab-label {
+			display: flex;
+			justify-content: space-between;
+			padding: 1em;
+			/* background: #333333; */
+			font-weight: bold;
+			cursor: pointer;
+			/* Icon */
+		}
+
+		/* .tab-label:hover {
+			background: #e83f33;
+		} */
+
+		.tab-label::after {
+			content: "❯";
+			width: 1em;
+			height: 1em;
+			text-align: center;
+			transition: all 0.2s;
+		}
+
+		.tab-content {
+			max-height: 0;
+			padding: 0 1em;
+			color: #333;
+			background: transparent;
+			transition: all 0.2s;
+			text-align: left;
+		}
+
+		.tab-close,
+		.tab-open {
+			display: flex;
+			justify-content: flex-end;
+			padding: 1em;
+			font-size: 0.75em;
+			/* background: #e83f33; */
+			cursor: pointer;
+		}
+
+		input:checked+.tab-label::after {
+			transform: rotate(90deg);
+		}
+
+		input:checked~.tab-content {
+			max-height: 100vh;
+			padding: 1em;
+		}
+
+		.toggle-label {
+			color: #000000;
+		}
+
+		.payment-options-check {
+			position: absolute;
+			opacity: 0;
+			z-index: -1;
+		}
+
+		.list-decimal {
+			list-style-type: decimal;
+			font-size: 16px;
+			padding-left: 30px;
+			line-height: 30px;
+		}
+
+		.table-benefit {
+			border-collapse: collapse;
+  			width: 100%;
+			font-size: 16px;
+			color: #333;
+		}
+
+		.table-benefit td, .table-benefit th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		.table-benefit tr:nth-child(even){background-color: #f2f2f2;}
+
+		.table-benefit tr:hover {background-color: #ddd;}
+
+		.table-benefit th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #afafaf;
+			color: black;
+		}
+
+		.section-title-crm {
+			font-size: 35px;
+			padding: 30px 10px;
+			color: white;
+			font-weight: 650;
+		}
+
+		#section-1 .section_1_content {
+			background-image: url('./assets/images/CRM-Page-BG section 1.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			padding: 20px;
+		}
+
+		#section-1 .section_1_content .page_headline {
+			margin-top: 10px;
+		}
+		#section-1 .section_1_content .pacowhell {
+			margin-left: 30px;
+		}
+		#section-1 .section_1_content .wording {
+			padding: 5px 150px;
+			font-size: 25px;
+			font-weight: 500;
+			color: #2372b9;
+		}
+		#section-1 .section_1_content .button-action {
+			padding: 10px 30px;
+		}
+		#section-1 .section_1_content .button-action button {
+			padding: 20px 40px;
+			font-size: 20px;
+			border: none;
+			border-radius: 40px;
+			background-color: #e94154;
+			color: white;
+			box-shadow: 6px 6px 13px 0px #951422;
+		}
+		#section-1 .section_1_content .button-action button:hover {
+			background-color: #b33141;
+		}
+		#section-1 .btn-download-app-section {
+			padding: 10px 200px;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		#section-1 .btn-download-app {
+			padding: 0px 20px;
+		}
+		#section-2 .section_2_content {
+			background-image: url('./assets/images/CRM-Page-BG section 2.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			padding: 20px;
+		}
+		#section-2 .image-paconnie-section-2 img{
+			height: 200px;
+		}
+		#section-2 .desc-paconnie-section-2 {
+			font-size: 18px;
+			font-weight: 500;
+			color: white;
+		}
+		#section-2 .desc-paconnie-section-2 a{
+			color: #2372b9;
+		}
+		#section-3 .section_3_content {
+			background-image: url('./assets/images/CRM-Page-BG section3.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			padding: 20px;
+		}
+		#section-3 .section-title-crm {
+			color: #2372b9;
+		}
+		#section-4 .section_4_content {
+			background-image: url('./assets/images/CRM-Page-BG section4.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			padding: 20px;
+		}
+		#section-4 .section-title-crm {
+			color: #2372b9;
+		}
+
+		 .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 2px;
+            counter-reset: div;
+        }
+
+        /* spanning cols, complete values missing */
+
+        .col-1 {
+            grid-column: auto/span 1;
+        }
+
+        .col-2 {
+            grid-column: auto/span 2;
+        }
+
+        .col-3 {
+            grid-column: auto/span 3;
+        }
+
+        .col-4 {
+            grid-column: auto/span 4;
+        }
+
+        .col-5 {
+            grid-column: auto/span 5;
+        }
+
+        .col-6 {
+            grid-column: auto/span 6;
+        }
+
+        .col-7 {
+            grid-column: auto/span 7;
+        }
+
+        .col-8 {
+            grid-column: auto/span 8;
+        }
+
+        .col-9 {
+            grid-column: auto/span 9;
+        }
+
+        .col-10 {
+            grid-column: auto/span 10;
+        }
+
+        .col-11 {
+            grid-column: auto/span 11;
+        }
+
+        .col-12 {
+            grid-column: auto/span 12;
         }
     </style>
 </head>

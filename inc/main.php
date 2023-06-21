@@ -31,12 +31,6 @@
             case"profil":
                 include "page/profil.php";
                 break;
-            case"snack":
-                include "page/snack.php";
-                break;
-            case"concession":
-                include "page/concession.php";
-                break;
             case"seat":
                 $schedule_time_id = $_GET['schedule_time_id'];
                 $data = tampilkan("
@@ -85,7 +79,7 @@
                 break;
             default:
                 echo'
-                    <h1>Halaman Tidak Ditemukan</h1>
+                    <h1 style="font-size:2em;font-weight:bold;margin:2.5rem 0;padding:0 530px;">404 Halaman Tidak Ditemukan</h1>
                 ';
                 break;
         }

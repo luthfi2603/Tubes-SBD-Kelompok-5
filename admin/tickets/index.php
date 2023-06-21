@@ -9,6 +9,7 @@
         INNER JOIN schedules f ON e.schedule_id = f.schedule_id
         INNER JOIN cinemas g ON f.cinema_id = g.cinema_id
         INNER JOIN cinema_auditoriums h ON e.cinema_auditorium_id = h.cinema_auditorium_id
+        ORDER BY a.ticket_id DESC
     ");
 ?>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">

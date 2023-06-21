@@ -12,7 +12,7 @@
                     <li role="presentation"><a href="/cgv?p=register">Sign Up</a></li>
                 </ul>
 
-                <div class="tab-content">
+                <div class="tab-content" style="padding:0;">
                     <div role="tabpanel" class="tab-pane active" id="login">
                         <div class="form-group login">
                             <form action="" method="post" autocomplete="off">

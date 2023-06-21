@@ -1,133 +1,98 @@
 <div class="main-body-container skin">
 	<div class="body-wrapper">
 		<div class="membership-body">
-			<div class="membership-image">
-				<img src="./assets/images/membershipp.jpg">
-			</div>
-			<div class="membership-info-section">
-				<div class="membership-info-group">
-					<div class="menu-header">
-						Lebih Untung dengan CGV Member!
+			<section id="section-1">
+				<div class="section_1_content">
+					<img src="./assets/images/CRM Page logo CGV.svg" alt="CGV Logo" width="100">
+					<div class="page_headline">
+						<img src="./assets/images/CRM-Page-Headline.png" alt="" style="width: 80%;">
 					</div>
-					<div class="menu-desc">
+					<div class="pacowhell">
+						<img src="./assets/images/CRM-PacoWheel section 1.png" alt="" style="width: 50%;">
+					</div>
+					<div class="wording">
 						Dapatkan beragam penawaran dan promosi menarik hingga tiket nonton GRATIS!
 					</div>
-				</div>
-
-				<div class="membership-option-section">
-					<div class="membership-option-word">
-						Ayo gabung menjadi bagian dari CGV Cinemas dengan menjadi member nya sekarang!
+					<div class="button-action">
+						<button type="button" onclick="window.open('/cgv/?p=register')">
+							Daftar Sekarang
+						</button>
 					</div>
-					<div class="membership-option-button">
-						<a href="/cgv?p=login" class="left">Log In</a>
-						<a href="/cgv?p=register" class="left">Sign Up</a>
-					</div>
-				</div>
-				<div class="clear"></div>
-				<div class="clear"></div>
-
-				<div class="membership-info-group">
-					<div class="menu-header">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
-							Mudahnya Menjadi CGV Member <i class="fa fa-angle-double-down"></i>
-						</a>
-					</div>
-					<div class="submenu-group">
-						<div role="tablist" id="collapse1" class="panel-collapse collapse">
-							<ol class="list-decimal" style="font-size: large;">
-								<li>
-									Buat akun CGV Member melalui menu My CGV di aplikasi CGV atau <a href="https://www.cgv.id/en/user/register" target="__blank">klik di sini</a>.
-								</li>
-								<li>
-									Lakukan transaksi dengan metode pembayaran apapun baik secara online maupun offline.
-								</li>
-								<li>
-									Jika melakukan pembayaran offline, tunjukkan nomor handphone atau nomor CGV Member kamu kepada staff CGV Cinemas untuk mendapatkan CGV Point.
-								</li>
-								<li>
-									Jika melakukan pembayaran online, CGV Point akan masuk secara otomatis ke akun kamu. Namun, untuk pembelian tiket bioskop CGV Point akan masuk 1x24 jam setelah showtime.
-								</li>
-								<li>
-									Kumpulkan dan tukarkan CGV Point kamu dengan tiket, snack, minuman dan hadiah menarik lainnya!
-								</li>
-							</ol>
+					<div class="grid btn-download-app-section">
+						<div class="col-6 btn-download-app">
+							<a href="https://itunes.apple.com/id/app/cgv-blitz/id781405923?mt=8" target="_blank">
+								<img src="./assets/images/CRM-Page-AppStore.svg" alt="">
+							</a>
+						</div>
+						<div class="col-6 btn-download-app">
+							<a href="https://play.google.com/store/apps/details?id=com.blitz.blitzandapp1&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">
+								<img src="./assets/images/CRM-Page-PlayStore.svg" alt="">
+							</a>
 						</div>
 					</div>
 				</div>
-				<div class="membership-info-group">
-					<div class="menu-header">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2" id="level-cgv-member">
-							Cari Tahu Level CGV Membermu <i class="fa fa-angle-double-down"></i>
-						</a>
+			</section>
+			<section id="section-2">
+				<div class="section_2_content">
+					<div class="section-title-crm">
+						Mudah menjadi CGV Member!
 					</div>
-					<div class="submenu-group">
-						<div role="tablist" id="collapse2" class="panel-collapse collapse">
-							<table class="table-benefit">
-								<thead>
-									<tr>
-										<th>
-											General Member
-										</th>
-										<th>
-											VIP Member
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<b>Level dasar</b> untuk kamu yang baru mendaftar
-										</td>
-										<td>
-											<b>Level tertinggi</b> untuk kamu yang sudah melakukan transaksi minimal Rp 1.000.000 per tahun
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<b>Bebas tukar CGV Point</b> <br>
-											dengan tiket nonton, makanan, minuman dan produk CGV lainnya yang senilai dengan jumlah CGV point kamu
-										</td>
-										<td>
-											<b>Bebas tukar CGV Point</b> <br>
-											dengan tiket nonton, makanan, minuman dan produk CGV lainnya yang senilai dengan jumlah CGV point kamu
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<b>5% cashback CGV Point</b> <br>
-											untuk setiap pembelian tiket nonton melalui aplikasi CGV atau Ticket Box
-										</td>
-										<td>
-											<b>7% cashback CGV Point</b> <br>
-											untuk setiap pembelian tiket nonton melalui aplikasi CGV atau Ticket Box
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<b>3% cashback CGV Point</b> <br>
-											untuk setiap pembelian makanan dan minuman melalui aplikasi CGV atau secara langsung di CGV Cinemas
-										</td>
-										<td>
-											<b>5% cashback CGV Point</b> <br>
-											untuk setiap pembelian makanan dan minuman melalui aplikasi CGV atau secara langsung di CGV Cinemas
-										</td>
-									</tr>
-								</tbody>
-							</table>
+
+					<div class="grid">
+						<div class="col-4">
+							<div class="">
+								<div class="image-paconnie-section-2">
+									<img src="./assets/images/CRM-Page-icon1 section2.svg" alt="" width="100%">
+								</div>
+								<div class="desc-paconnie-section-2">
+									Buat atau masuk ke akun <br>CGV Member
+									<div>
+										<a href="/cgv/?p=login">Klik di sini.</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="">
+								<div class="image-paconnie-section-2">
+									<img src="./assets/images/CRM-Page-icon2 section2.svg" alt="" width="100%">
+								</div>
+								<div class="desc-paconnie-section-2">
+									Lakukan transaksi dengan <br>CGV Member
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="">
+								<div class="image-paconnie-section-2"><img src="./assets/images/CRM-Page-icon3 section2.svg" alt="" width="100%"></div>
+								<div class="desc-paconnie-section-2">Kumpulkan dan tukarkan <br>CGV Point kamu!</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="membership-info-group">
-					<div class="menu-header">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse2">
-							FAQ <i class="fa fa-angle-double-down"></i>
-						</a>
+			</section>
+			<section id="section-3">
+				<div class="section_3_content">
+					<div class="section-title-crm">
+						Cari tahu Level CGV Membermu!
 					</div>
-					<div class="submenu-group">
-						<div role="tablist" id="collapse3" class="panel-collapse collapse">
+					<div class="row">
+						<div class="col-12">
+							<img src="./assets/images/CRM-Page-Table-section3.png" alt="" width="75%">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="section-4">
+				<div class="section_4_content">
+					<div class="section-title-crm">
+						FAQ
+					</div>
+					<div class="row text-left">
+						<div class="col-12">
 							<div class="tabs">
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-1" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-1" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-1">
 										Apa itu CGV Member?
 									</label>
@@ -136,7 +101,7 @@
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-2" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-2" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-2">
 										Bagaimana jika lupa password CGV Member?
 									</label>
@@ -150,21 +115,24 @@
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-3" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-3" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-3">
 										Apa itu CGV Point?
 									</label>
 									<div class="tab-content">
 										<p>
-											CGV Point adalah point yang kamu dapatkan setiap melakukan transaksi di CGV Cinemas dengan menggunakan CGV Member. Besaran point yang didapatkan akan berbeda-beda tergantung level CGV Member kamu. Pelajari lebih lanjut di <a href="#level-cgv-member" onclick="if($('#level-cgv-member' ).hasClass('collapsed')){$('#level-cgv-member')[0].click();}">Level CGV Member</a>.
+											CGV Point adalah point yang kamu dapatkan setiap melakukan transaksi di CGV Cinemas dengan menggunakan CGV Member. Besaran point yang didapatkan akan berbeda-beda tergantung level CGV Member kamu. Pelajari lebih lanjut di <a href="#level-cgv-member" @click="scrollIntoLevelCgvMember">Level CGV Member</a>.
 										</p>
 										<p>
 											<b>Setiap 1 CGV Point bernilai Rp 1,- </b> dan dapat kamu tukarkan dengan produk CGV apapun yang setara nilainya dengan point yang kamu miliki.
 										</p>
+										<p>
+											Maksimal CGV Point yang dapat diklaim dalam satu hari adalah sebanyak 5 transaksi atau senilai Rp 1.000.000. Sedangkan batas maksimal CGV Point yang dapat ditukarkan menjadi hadiah hanya 500.000 point per hari.
+										</p>
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-4" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-4" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-4">
 										Bagaimana cara untuk klaim CGV Point secara langsung di CGV Cinemas?
 									</label>
@@ -183,7 +151,7 @@
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-5" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-5" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-5">
 										Apakah transaksi melalui partner resmi CGV bisa mendapatkan CGV Point?
 									</label>
@@ -211,7 +179,7 @@
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-6" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-6" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-6">
 										Bagaimana cara naik level di CGV Member?
 									</label>
@@ -222,7 +190,7 @@
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-7" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-7" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-7">
 										Bagaimana cara menambahkan kartu CGV Member ke dalam satu akun?
 									</label>
@@ -253,7 +221,7 @@
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-8" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-8" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-8">
 										Bagaimana cara menggunakan Voucher?
 									</label>
@@ -278,7 +246,7 @@
 									</div>
 								</div>
 								<div class="tab">
-									<input class="payment-options-check" type="radio" id="faq-9" name="faq_benefit">
+									<input class="payment-options-check" type="radio" id="faq-9" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
 									<label class="tab-label" for="faq-9">
 										Bagaimana cara menggunakan Kupon Promo?
 									</label>
@@ -302,28 +270,22 @@
 										</ol>
 									</div>
 								</div>
+								<div class="tab">
+									<input class="payment-options-check" type="radio" id="faq-10" name="faq-benefit" v-on:change="resetMaxHeightPanel($event)">
+									<label class="tab-label" for="faq-10">
+										Bagaimana cara menghubungi kami?
+									</label>
+									<div class="tab-content">
+										<p>
+											Jika kamu masih memiliki pertanyaan lebih lanjut, kirimkan pertanyaanmu melalui email <a href="mailto:callcenter@cgv.id">callcenter@cgv.id</a> atau kunjungi bagian Guest Service di lokasi CGV Cinemas terdekat.
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<div class="membership-info-group">
-					<div class="menu-header">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
-							Hubungi kami <i class="fa fa-angle-double-down"></i>
-						</a>
-					</div>
-					<div class="submenu-group">
-						<div role="tablist" id="collapse4" class="panel-collapse collapse">
-							<p style="font-size:16px;">
-								Jika kamu masih memiliki pertanyaan lebih lanjut, kirimkan pertanyaanmu melalui email <a href="mailto:callcenter@cgv.id">callcenter@cgv.id</a> atau kunjungi bagian Guest Service di lokasi CGV Cinemas terdekat.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="clear"></div>
-			</div>
+			</section>
 		</div>
 	</div>
 </div>
