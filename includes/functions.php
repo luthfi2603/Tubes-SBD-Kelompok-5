@@ -308,7 +308,7 @@
         $hasil = mysqli_query($conn, $query);
 
         // cek email
-        if(mysqli_num_rows($hasil) === 1){
+        if(mysqli_num_rows($hasil)){
             foreach($hasil as $isi){
                 $id = $isi['id'];
                 $user = $isi['username'];
