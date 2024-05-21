@@ -3,7 +3,7 @@
         session_start();
     }
 
-    $conn = mysqli_connect("localhost", "root", "", "cgv");
+    $conn = mysqli_connect("127.0.0.1", "root", "", "cgv");
 
     function tampilkan($query){
         global $conn;
@@ -308,7 +308,7 @@
         $hasil = mysqli_query($conn, $query);
 
         // cek email
-        if(mysqli_num_rows($hasil)){
+        if(mysqli_num_rows($hasil) === 1){
             foreach($hasil as $isi){
                 $id = $isi['id'];
                 $user = $isi['username'];

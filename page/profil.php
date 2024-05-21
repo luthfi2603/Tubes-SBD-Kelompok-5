@@ -1,8 +1,5 @@
 <?php
     $data = tampilkan("SELECT * FROM users a INNER JOIN cities b ON a.city = b.city_id WHERE a.id = ".$_SESSION['id']."")[0];
-    // echo"<pre>";
-    // var_dump($data); die;
-    // echo"</pre>";
 ?>
 <div class="main-body-container skin">
     <div class="body-wrapper">

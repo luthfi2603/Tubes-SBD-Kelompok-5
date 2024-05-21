@@ -1,9 +1,7 @@
 <div class="clear"></div>
-
 <div class="bottom-banner">
     <div class="banner-wrapper"></div>
 </div>
-
 <div class="main-footer-container">
     <div class="main-footer-wrapper">
         <div class="feature-list">
@@ -17,7 +15,6 @@
                 <li><a href="#" class="gold">GOLDCLASS</a></li>
                 <li><a href="#" class="satin">SATIN</a></li>
                 <li><a href="#" class="sweet">SWEETBOX</a></li>
-
             </ul>
         </div>
         <div class="info-wrapper">
@@ -34,14 +31,15 @@
                 </ul>
             </div>
             <div class="footer-address">
+                <p class="copyright">COPYRIGHT 2023. CJ CGV All RIGHTS RESERVED.</p>
                 <div class="ssl-logo-wrap">
                     <a href="https://play.google.com/store/apps/details?id=com.blitz.blitzandapp1&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">
-                    <img alt='Get it on Google Play' src='./assets/images/en_badge_web_generic.png' width="140">
+                        <img alt='Get it on Google Play' src='./assets/images/en_badge_web_generic.png' width="140">
                     </a>
-                    <a href="https://itunes.apple.com/id/app/cgv-blitz/id781405923?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:135px;height:38px;margin-bottom: 8px;" target="_blank"></a>
-
+                    <a href="https://itunes.apple.com/id/app/cgv-blitz/id781405923?mt=8" style="display:inline-block; width:135px; margin-top:1px;" target="_blank">
+                        <img src="./assets/images/download-from-app-store.png" alt="" width="100%">
+                    </a>
                 </div>
-                <p class="copyright">COPYRIGHT 2023. CJ CGV All RIGHTS RESERVED.</p>
             </div>
         </div>
     </div>

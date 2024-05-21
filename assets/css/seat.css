@@ -239,7 +239,7 @@ ul.seat-row li a.chosen, .seattype.chosen {
 
 .audi-screen span {
 	display: block;
-	background: url('/assets/images/sprite_blitz.png') no-repeat;
+	background: url('../images/sprite_blitz.png') no-repeat;
 	background-position: 3px -460px;
 	height: 20px;
 	width: 517px;

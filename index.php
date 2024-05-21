@@ -40,7 +40,7 @@
             var ga = document.createElement('script');
             ga.type = 'text/javascript';
             ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            // ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ga, s);
         })();
@@ -64,7 +64,7 @@
             s.parentNode.insertBefore(t, s)
         }
         (window,
-            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            document, 'script', '');
         fbq('init', '380888722260575'); // Insert your pixel ID here.
         fbq('track', 'PageView');
     </script>
